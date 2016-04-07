@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Coding Evo]]></title>
+  <subtitle><![CDATA[karlwk]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-04-05T13:48:32.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name><![CDATA[karlwk]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2016/04/04/hello-world/"/>
+    <id>http://yoursite.com/2016/04/04/hello-world/</id>
+    <published>2016-04-04T15:30:32.000Z</published>
+    <updated>2016-04-05T13:48:32.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[git初接触]]></title>
+    <link href="http://yoursite.com/2016/03/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://yoursite.com/2016/03/26/git的使用/</id>
+    <published>2016-03-25T22:53:26.000Z</published>
+    <updated>2016-04-05T13:58:48.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>git是一个开源的<strong>分布式</strong>版本控制系统，与常用的<strong>SVN</strong>,<strong>CVS</strong>等不同。因为采取了分布式版本库的方式，不需要服务器软件的支持。</p>
+<p>git他不仅仅是个版本控制系统，还是个内容管理系统<strong>CMS</strong>.</p>
+<h2 id="Git和SVN区别："><a href="#Git和SVN区别：" class="headerlink" title="Git和SVN区别："></a>Git和SVN区别：</h2><ol>
+<li>git是分布式的，svn和cvs不是，这个是最核心的区别</li>
+<li>git把内容元数据方式存储，而SVN是按文件：把所有的版本控制系统都是把元文件信息隐藏在svn,cvs等文件中</li>
+<li>git分支和svn的分支不同：分支在svn中一点都不特别，就是版本中的另外一个目录</li>
+<li>git没有一个全局的版本号，而svn有：目前为止这是svn相比git缺少的最大的一个特征</li>
+<li>git的内容完整性要优于svn，git的内容存储使用的是<strong>SHA-1</strong>哈希算法，这样能确保代码内容的完整性，确保在遇到磁盘和网络问题时减低对版本库的破坏</li>
+</ol>
+<h2 id="在git-log-–oneline-命令进入log页面后，按q退出当前页面"><a href="#在git-log-–oneline-命令进入log页面后，按q退出当前页面" class="headerlink" title="在git log –oneline 命令进入log页面后，按q退出当前页面"></a>在git log –oneline 命令进入log页面后，按q退出当前页面</h2>]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>git是一个开源的<strong>分布式</strong>版本控制系统，与常用的<strong>SVN</strong>,<strong>C]]>
+    </summary>
+    
+  </entry>
+  
+</feed>
