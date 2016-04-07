@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://wangkai1018.github.io/2016/03/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2016-04-05T13:58:48.000Z</lastmod>
+    <loc>http://wangkai1018.github.io/categories/index.html</loc>
+    <lastmod>2016-04-07T07:47:03.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wangkai1018.github.io/2016/04/07/AndroidStudio%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6/</loc>
+    <lastmod>2016-04-07T07:11:35.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://wangkai1018.github.io/2016/04/04/hello-world/</loc>
-    <lastmod>2016-04-05T13:48:32.000Z</lastmod>
+    <lastmod>2016-04-07T06:24:49.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wangkai1018.github.io/2016/03/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2016-04-07T06:24:24.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://wangkai1018.github.io/tags/index.html</loc>
+    <lastmod>2016-04-07T04:22:46.000Z</lastmod>
   </url>
   
 </urlset>
