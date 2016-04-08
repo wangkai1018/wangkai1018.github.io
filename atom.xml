@@ -312,7 +312,7 @@
     <link href="http://wangkai1018.github.io/2015/03/11/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://wangkai1018.github.io/2015/03/11/vim常用命令/</id>
     <published>2015-03-11T13:53:09.000Z</published>
-    <updated>2016-04-08T13:58:40.000Z</updated>
+    <updated>2016-04-08T14:47:32.000Z</updated>
     <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>vim中一些经常用到的命令,因为最近入手了一个mac笔记本，发现mac系统中无法直接创建txt文档，于是我知道了VIM.</p>
 <h2 id="删除："><a href="#删除：" class="headerlink" title="删除："></a>删除：</h2><ul>
 <li><code>d</code>+<code>gg</code> 删除当前到第一行</li>
@@ -354,6 +354,8 @@
     <![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>vim中一些经常用到的命令,因为最近入手了一个mac笔记本，发现mac系统中无法直接创建txt文档，于是我知道了VIM.</p>
 <h2 i]]>
     </summary>
+    
+      <category term="vim" scheme="http://wangkai1018.github.io/tags/vim/"/>
     
   </entry>
   
