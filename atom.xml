@@ -3,9 +3,9 @@
   <title><![CDATA[Coding Evo]]></title>
   <subtitle><![CDATA[karlwk]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://wangkai1018.github.io/"/>
+  <link href="http://wangkai1018.github.evo/"/>
   <updated>2016-04-08T13:40:17.000Z</updated>
-  <id>http://wangkai1018.github.io/</id>
+  <id>http://wangkai1018.github.evo/</id>
   
   <author>
     <name><![CDATA[karlwk]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[android ADB 常用命令]]></title>
-    <link href="http://wangkai1018.github.io/2016/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://wangkai1018.github.io/2016/09/06/android-ADB-常用命令/</id>
+    <link href="http://wangkai1018.github.evo/2016/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wangkai1018.github.evo/2016/09/06/android-ADB-常用命令/</id>
     <published>2016-09-06T07:27:01.000Z</published>
     <updated>2016-04-08T13:40:17.000Z</updated>
     <content type="html"><![CDATA[<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><ul>
@@ -43,16 +43,16 @@
 <li>app：adb unstall [-]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
-      <category term="ADB" scheme="http://wangkai1018.github.io/tags/ADB/"/>
+      <category term="ADB" scheme="http://wangkai1018.github.evo/tags/ADB/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Android中的布局和适配]]></title>
-    <link href="http://wangkai1018.github.io/2015/10/16/Android%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80%E5%92%8C%E9%80%82%E9%85%8D/"/>
-    <id>http://wangkai1018.github.io/2015/10/16/Android中的布局和适配/</id>
+    <link href="http://wangkai1018.github.evo/2015/10/16/Android%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80%E5%92%8C%E9%80%82%E9%85%8D/"/>
+    <id>http://wangkai1018.github.evo/2015/10/16/Android中的布局和适配/</id>
     <published>2015-10-16T13:17:02.000Z</published>
     <updated>2016-04-08T13:32:08.000Z</updated>
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>介绍几种android中常用的布局和适配尝试</p>
@@ -140,14 +140,14 @@
 <h3 id="线性布局LinearLayout"><a href="#线性布局Lin]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[android系统特性与平台架构]]></title>
-    <link href="http://wangkai1018.github.io/2015/09/08/android%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%9E%B6%E6%9E%84/"/>
-    <id>http://wangkai1018.github.io/2015/09/08/android系统特性与平台架构/</id>
+    <link href="http://wangkai1018.github.evo/2015/09/08/android%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%9E%B6%E6%9E%84/"/>
+    <id>http://wangkai1018.github.evo/2015/09/08/android系统特性与平台架构/</id>
     <published>2015-09-08T03:47:43.000Z</published>
     <updated>2016-04-08T13:40:28.000Z</updated>
     <content type="html"><![CDATA[<h3 id="1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"><a href="#1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）" class="headerlink" title="1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"></a>1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）</h3><h3 id="2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"><a href="#2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎" class="headerlink" title="2.Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"></a>2.<code>Dalvik</code>虚拟机：专门为移动设备优化；集成的浏览器：<code>webkit</code>引擎</h3><h3 id="3-sqlite结构化的数据存储"><a href="#3-sqlite结构化的数据存储" class="headerlink" title="3.sqlite结构化的数据存储"></a>3.<code>sqlite</code>结构化的数据存储</h3><h3 id="4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等"><a href="#4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等" class="headerlink" title="4.优化的图形库，多媒体支持，GSM电话技术，蓝牙等"></a>4.优化的图形库，多媒体支持，<code>GSM</code>电话技术，蓝牙等</h3><h3 id="5-采用软件叠层方式构建"><a href="#5-采用软件叠层方式构建" class="headerlink" title="5.采用软件叠层方式构建"></a>5.采用软件叠层方式构建</h3><hr>
@@ -157,14 +157,14 @@
     <![CDATA[<h3 id="1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"><a href="#1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）" class="headerlink"]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[git和svn的区别]]></title>
-    <link href="http://wangkai1018.github.io/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
-    <id>http://wangkai1018.github.io/2015/06/26/git的使用/</id>
+    <link href="http://wangkai1018.github.evo/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <id>http://wangkai1018.github.evo/2015/06/26/git的使用/</id>
     <published>2015-06-26T13:32:06.000Z</published>
     <updated>2016-04-08T13:56:30.000Z</updated>
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>git是一个开源的<strong>分布式</strong>版本控制系统，与常用的<strong>SVN</strong>,<strong>CVS</strong>等不同。因为采取了分布式版本库的方式，不需要服务器软件的支持。</p>
@@ -181,17 +181,17 @@
     <![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>git是一个开源的<strong>分布式</strong>版本控制系统，与常用的<strong>SVN</strong>,<strong>C]]>
     </summary>
     
-      <category term="git" scheme="http://wangkai1018.github.io/tags/git/"/>
+      <category term="git" scheme="http://wangkai1018.github.evo/tags/git/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[AndroidStudio使用技巧]]></title>
-    <link href="http://wangkai1018.github.io/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://wangkai1018.github.io/2015/06/13/AndroidStudio使用技巧/</id>
+    <link href="http://wangkai1018.github.evo/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://wangkai1018.github.evo/2015/06/13/AndroidStudio使用技巧/</id>
     <published>2015-06-13T02:42:55.000Z</published>
-    <updated>2016-04-08T13:55:30.000Z</updated>
-    <content type="html"><![CDATA[<p><img src="/AndroidStudio使用技巧/1418100017289.jpg" alt="androidicon"></p>
+    <updated>2016-04-10T06:37:13.000Z</updated>
+    <content type="html"><![CDATA[<p><img src="http://7xst5r.com2.z0.glb.clouddn.com/androidstudio.png" alt="image"></p>
 <p>MAC系统专用</p>
 <h3 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a>快捷键：</h3><p>1.方法重构：<code>command</code>+<code>option</code>+<code>M</code></p>
 <p>2.于重构相反：<code>command</code>+<code>option</code>+<code>I</code></p>
@@ -238,21 +238,21 @@
 <h3 id="导入github第三方类库，常见错误解决方法："><a href="#导入github第三方类库，常见错误解决方法：" class="headerlink" title="导入github第三方类库，常见错误解决方法："></a>导入github第三方类库，常见错误解决方法：</h3><p><a href="http://www.androidchina.net/4322.html" target="_blank" rel="external">去查看</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p><img src="/AndroidStudio使用技巧/1418100017289.jpg" alt="androidicon"></p>
+    <![CDATA[<p><img src="http://7xst5r.com2.z0.glb.clouddn.com/androidstudio.png" alt="image"></p>
 <p>MAC系统专用</p>
-<h3 id="快捷键："><a href="#快捷键：" class="headerlink" ti]]>
+<h3 id="快捷键："><a href="#快捷键：" class="h]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
-      <category term="Android studio" scheme="http://wangkai1018.github.io/tags/Android-studio/"/>
+      <category term="Android studio" scheme="http://wangkai1018.github.evo/tags/Android-studio/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[AndroidStudio必备插件]]></title>
-    <link href="http://wangkai1018.github.io/2015/06/09/AndroidStudio%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6/"/>
-    <id>http://wangkai1018.github.io/2015/06/09/AndroidStudio必备插件/</id>
+    <link href="http://wangkai1018.github.evo/2015/06/09/AndroidStudio%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6/"/>
+    <id>http://wangkai1018.github.evo/2015/06/09/AndroidStudio必备插件/</id>
     <published>2015-06-08T20:14:27.000Z</published>
     <updated>2016-04-08T13:54:22.000Z</updated>
     <content type="html"><![CDATA[<h1 id="AndroidStudio必备插件"><a href="#AndroidStudio必备插件" class="headerlink" title="AndroidStudio必备插件"></a>AndroidStudio必备插件</h1><h3 id="SelectorChapek-for-Android："><a href="#SelectorChapek-for-Android：" class="headerlink" title="SelectorChapek for Android："></a><a href="https://github.com/inmite/android-selector-chapek" target="_blank" rel="external">SelectorChapek for Android</a>：</h3><p>   自动生成selector文件，这个fell倍爽，点击链接详细了解</p>
@@ -267,16 +267,16 @@
     <![CDATA[<h1 id="AndroidStudio必备插件"><a href="#AndroidStudio必备插件" class="headerlink" title="AndroidStudio必备插件"></a>AndroidStudio必备插件</h1><h3 id="Selec]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
-      <category term="Android studio" scheme="http://wangkai1018.github.io/tags/Android-studio/"/>
+      <category term="Android studio" scheme="http://wangkai1018.github.evo/tags/Android-studio/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[AndroidStudio的资源目录及说明]]></title>
-    <link href="http://wangkai1018.github.io/2015/06/08/AndroidStudio%E7%9A%84%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E5%8F%8A%E8%AF%B4%E6%98%8E/"/>
-    <id>http://wangkai1018.github.io/2015/06/08/AndroidStudio的资源目录及说明/</id>
+    <link href="http://wangkai1018.github.evo/2015/06/08/AndroidStudio%E7%9A%84%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E5%8F%8A%E8%AF%B4%E6%98%8E/"/>
+    <id>http://wangkai1018.github.evo/2015/06/08/AndroidStudio的资源目录及说明/</id>
     <published>2015-06-08T13:49:50.000Z</published>
     <updated>2016-04-08T13:53:28.000Z</updated>
     <content type="html"><![CDATA[<p>AndroidStudio以下简称AS,因为as和eclipse目录有些区别，所以记录一下</p>
@@ -301,16 +301,16 @@
 <h3 id="as中没有assets目录，要用的话可以手动创建"><a href="#as中没有assets目录，要用的话可以手动创建" class="headerlink]]>
     </summary>
     
-      <category term="android" scheme="http://wangkai1018.github.io/tags/android/"/>
+      <category term="android" scheme="http://wangkai1018.github.evo/tags/android/"/>
     
-      <category term="Android studio" scheme="http://wangkai1018.github.io/tags/Android-studio/"/>
+      <category term="Android studio" scheme="http://wangkai1018.github.evo/tags/Android-studio/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[vim常用命令]]></title>
-    <link href="http://wangkai1018.github.io/2015/03/11/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://wangkai1018.github.io/2015/03/11/vim常用命令/</id>
+    <link href="http://wangkai1018.github.evo/2015/03/11/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://wangkai1018.github.evo/2015/03/11/vim常用命令/</id>
     <published>2015-03-11T13:53:09.000Z</published>
     <updated>2016-04-08T14:47:32.000Z</updated>
     <content type="html"><![CDATA[<h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>vim中一些经常用到的命令,因为最近入手了一个mac笔记本，发现mac系统中无法直接创建txt文档，于是我知道了VIM.</p>
@@ -355,7 +355,7 @@
 <h2 i]]>
     </summary>
     
-      <category term="vim" scheme="http://wangkai1018.github.io/tags/vim/"/>
+      <category term="vim" scheme="http://wangkai1018.github.evo/tags/vim/"/>
     
   </entry>
   
