@@ -4,7 +4,7 @@
   <subtitle><![CDATA[karlwk]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.codingevo.com/"/>
-  <updated>2016-04-08T13:40:17.000Z</updated>
+  <updated>2016-04-11T08:43:19.000Z</updated>
   <id>http://www.codingevo.com/</id>
   
   <author>
@@ -13,41 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[android ADB 常用命令]]></title>
-    <link href="http://www.codingevo.com/2016/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.codingevo.com/2016/09/06/android-ADB-常用命令/</id>
-    <published>2016-09-06T07:27:01.000Z</published>
-    <updated>2016-04-08T13:40:17.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><ul>
-<li>adb install [-r] [-s]  xxxx.apk 安装软件</li>
-<li>app：adb unstall [-k] &lt;包名&gt; -k 卸载app</li>
-<li>adb pull xxxx.xxxx 取出手机中的文件</li>
-<li>adb push xxx.xxx 发送文件到手机当中</li>
-<li>adb shell  进入手机终端</li>
-<li>adb devices     杀死adb</li>
-<li>adb start-server   启动adb</li>
-<li>reset adb 重启</li>
-</ul>
-<p> FAQ</p>
-<ul>
-<li>App的包名是App的唯一标识！！！</li>
-<li>安装软件中的  -r  重新安装</li>
-<li>-s   安装到SDK</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><ul>
-<li>adb install [-r] [-s]  xxxx.apk 安装软件</li>
-<li>app：adb unstall [-]]>
-    </summary>
-    
-      <category term="android" scheme="http://www.codingevo.com/tags/android/"/>
-    
-      <category term="ADB" scheme="http://www.codingevo.com/tags/ADB/"/>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[android中MVP的实践]]></title>
@@ -173,6 +138,41 @@
     </summary>
     
       <category term="android" scheme="http://www.codingevo.com/tags/android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[android ADB 常用命令]]></title>
+    <link href="http://www.codingevo.com/2015/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.codingevo.com/2015/09/06/android-ADB-常用命令/</id>
+    <published>2015-09-06T07:27:01.000Z</published>
+    <updated>2016-04-11T09:36:14.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><ul>
+<li>adb install [-r] [-s]  xxxx.apk 安装软件</li>
+<li>app：adb unstall [-k] &lt;包名&gt; -k 卸载app</li>
+<li>adb pull xxxx.xxxx 取出手机中的文件</li>
+<li>adb push xxx.xxx 发送文件到手机当中</li>
+<li>adb shell  进入手机终端</li>
+<li>adb devices     杀死adb</li>
+<li>adb start-server   启动adb</li>
+<li>reset adb 重启</li>
+</ul>
+<p> FAQ</p>
+<ul>
+<li>App的包名是App的唯一标识！！！</li>
+<li>安装软件中的  -r  重新安装</li>
+<li>-s   安装到SDK</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><ul>
+<li>adb install [-r] [-s]  xxxx.apk 安装软件</li>
+<li>app：adb unstall [-]]>
+    </summary>
+    
+      <category term="android" scheme="http://www.codingevo.com/tags/android/"/>
+    
+      <category term="ADB" scheme="http://www.codingevo.com/tags/ADB/"/>
     
   </entry>
   
