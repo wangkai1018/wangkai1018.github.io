@@ -4,7 +4,7 @@
   <subtitle><![CDATA[karlwk]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.codingevo.com/"/>
-  <updated>2018-02-14T14:10:38.094Z</updated>
+  <updated>2018-02-17T02:44:23.379Z</updated>
   <id>http://www.codingevo.com/</id>
   
   <author>
@@ -13,6 +13,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[消防安全技术实务基础概念]]></title>
+    <link href="http://www.codingevo.com/2018/02/17/%E6%B6%88%E9%98%B2%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E5%AE%9E%E5%8A%A1%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    <id>http://www.codingevo.com/2018/02/17/消防安全技术实务基础概念/</id>
+    <published>2018-02-17T02:03:22.000Z</published>
+    <updated>2018-02-17T02:44:23.379Z</updated>
+    <content type="html"><![CDATA[<p>#消防安全技术实务基础概念集锦</p>
+<ol>
+<li><strong>裙房</strong>：在搞成建筑主体投影外，与建筑主体相连且建筑高度<strong>不大于24m</strong>的建筑</li>
+<li><strong>商业服务网点</strong>：设置在<strong>住宅建筑</strong>的<strong>首层</strong>或<strong>首层及二层</strong>，每个分割单元建筑面积<strong>不大于300㎡</strong>的<strong>商店、邮政所、理发店</strong>等小型营业性用房</li>
+<li><strong>高架仓库</strong>：货架高度<strong>大于7m</strong>且采用<strong>机械化</strong>操作或<strong>自动化</strong>控制的货架仓库</li>
+<li><strong>半地下室</strong>：房间室内地面低于室外设计地面的平均高度大于该房间平均净高的⅓，且<strong>不大于½</strong></li>
+<li><strong>地下室</strong>：地下室是指房间地面<strong>低于</strong>室外地平面的高度<strong>超过该房间净高的½</strong></li>
+<li><code>kk</code></li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>#消防安全技术实务基础概念集锦</p>
+<ol>
+<li><strong>裙房</strong>：在搞成建筑主体投影外，与建筑主体相连且建筑高度<strong>不大于24m</strong>的建筑</li>
+<li><strong>商业服务网点</strong>：设置在<s]]>
+    </summary>
+    
+      <category term="注册消防工程师" scheme="http://www.codingevo.com/tags/%E6%B3%A8%E5%86%8C%E6%B6%88%E9%98%B2%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+      <category term="技术实务" scheme="http://www.codingevo.com/tags/%E6%8A%80%E6%9C%AF%E5%AE%9E%E5%8A%A1/"/>
+    
+      <category term="基础概念" scheme="http://www.codingevo.com/tags/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[MacDown帮助文档]]></title>
@@ -53,7 +84,7 @@ Header 2
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x75;&#x72;&#x61;&#x6e;&#117;&#x73;&#x6a;&#114;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;">&#x75;&#x72;&#x61;&#x6e;&#117;&#x73;&#x6a;&#114;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#117;&#114;&#x61;&#x6e;&#117;&#115;&#x6a;&#114;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;">&#117;&#114;&#x61;&#x6e;&#117;&#115;&#x6a;&#114;&#64;&#103;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#109;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
 <p>Same thing with urls: <a href="http://macdown.uranusjr.com" target="_blank" rel="external">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
 <p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="external">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
 <h4 id="Reference-style"><a href="#Reference-style" class="headerlink" title="Reference style"></a>Reference style</h4><p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
