@@ -117,6 +117,61 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-RxJava使用小结" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/05/14/RxJava使用小结/">RxJava使用小结</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactiveX/">ReactiveX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
+</div>
+        <time datetime="2016-05-14T02:55:03.000Z" itemprop="datePublished" class="post-tiem">
+  2016-05-14
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent">
+        
+          <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>近来一些日子，<code>Reactivex</code>看到的机会越来越多，如雷贯耳，于是乎决定亲自撸一遍，记录一下自己遇到的坑</p>
+<p>###为什么要用Reactivex？</p>
+<ul>
+<li>异步：它是一个实现<code>异步</code>操作的库</li>
+<li>简洁：它可以随着应用程序的越来越复杂的同时，依然保持简洁</li>
+</ul>
+<blockquote>
+<p>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</p>
+</blockquote>
+<p>这是在<a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a>在github主页上的介绍</p>
+<h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><p><code>RxJava</code>的异步实现，是通过扩展的观察者模式实现的。android中比较典型的例子：点击监听器<code>OnClickListener</code>。<code>View</code>是被观察者，<code>OnClickListener</code>是观察者，两者通过<code>setOnClickListener</code>产生关系，<code>Android Framework</code>层会将点击事件发送给注册过的OnClickListener。</p>
+<p>RxJava的四大基本概念</p>
+<ul>
+<li>Observable：被观察者，可观察者</li>
+<li>Observer: 观察者</li>
+<li>Subscribe：订阅</li>
+<li>Event：事件</li>
+</ul>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2016/05/14/RxJava使用小结/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-android中MVP的实践" class="article article-type-post" itemscope="" itemprop="blogPost">
     
       
