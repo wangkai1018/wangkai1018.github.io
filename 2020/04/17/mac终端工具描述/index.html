@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Coding Evo">
 <meta property="og:description" content="已使用过的MAC终端工具nvm：nodejs包管理工具，同时对多版本进行管理 pyenv:python多版本管理工具。可配合的镜像源为阿里,搜狐和豆瓣源不可用 homebrew: homebrew包管理工具，下载更新非常高效，全程终端进行，配合国内镜像使用速度很快。其中分为cask和formula模块。  cask：为常用app模块,例如：优酷、爱奇艺 formula:开发工具，开发环境的模块">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-30T10:31:28.456Z">
+<meta property="og:updated_time" content="2020-05-09T09:08:14.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mac终端工具描述">
 <meta name="twitter:description" content="已使用过的MAC终端工具nvm：nodejs包管理工具，同时对多版本进行管理 pyenv:python多版本管理工具。可配合的镜像源为阿里,搜狐和豆瓣源不可用 homebrew: homebrew包管理工具，下载更新非常高效，全程终端进行，配合国内镜像使用速度很快。其中分为cask和formula模块。  cask：为常用app模块,例如：优酷、爱奇艺 formula:开发工具，开发环境的模块">
@@ -183,8 +183,22 @@
 <li>formula:开发工具，开发环境的模块</li>
 </ul>
 <p><strong>homebrew常用命令</strong>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">brew update         #更新homebrew</span><br><span class="line">brew upgrade [包名] #更新所有安装的软件包，也可单独指定更新</span><br><span class="line">brew search 包名    #查找软件包</span><br><span class="line">brew install 包名   #安装软件包</span><br><span class="line">brew list          #列出已安装的软件包</span><br><span class="line">brew uninstall 包名 #卸载软件包</span><br><span class="line">brew outdated      #列出可以更新的软件包</span><br><span class="line">brew info 包名      #查看软件包的信息</span><br><span class="line">brew cask list     #列出cask下已安装的软件包</span><br><span class="line">brew cask install 包名 #安装cask下的能安装的软件包</span><br><span class="line">brew cask outdated [包名] #列出可以更新的软件包,也可指定包名</span><br><span class="line">brew cask upgrade [包名] #更新所有的软件包，也可指定包名更新</span><br><span class="line">brew cleanup             # 清理所有包的旧版本</span><br><span class="line">brew cleanup $FORMULA    # 清理指定包的旧版本</span><br><span class="line">brew cleanup -n          # 查看可清理的旧版本包，不执行实际操作</span><br></pre></td></tr></table></figure>
-<p><strong>pip</strong>:python的扩展包管理工具，mac、windows版本的python有的没有自带，需要手动下载安装。配合豆瓣镜像下载很快。</p>
+<pre><code>brew update         #更新homebrew
+brew upgrade [包名] #更新所有安装的软件包，也可单独指定更新
+brew search 包名    #查找软件包
+brew install 包名   #安装软件包
+brew list          #列出已安装的软件包
+brew uninstall 包名 #卸载软件包
+brew outdated      #列出可以更新的软件包
+brew info 包名      #查看软件包的信息
+brew cask list     #列出cask下已安装的软件包
+brew cask install 包名 #安装cask下的能安装的软件包
+brew cask outdated [包名] #列出可以更新的软件包,也可指定包名
+brew cask upgrade [包名] #更新所有的软件包，也可指定包名更新
+brew cleanup             # 清理所有包的旧版本
+brew cleanup $FORMULA    # 清理指定包的旧版本
+brew cleanup -n          # 查看可清理的旧版本包，不执行实际操作
+</code></pre><p><strong>pip</strong>:python的扩展包管理工具，mac、windows版本的python有的没有自带，需要手动下载安装。配合豆瓣镜像下载很快。</p>
 <p><strong>conda</strong>:conda是一个开源包管理系统和环境管理系统,跨平台。</p>
 <p><strong>Anaconda</strong>：Anaconda是一个开源的Python发行版本，包含了conda、python等180多个科学包及其依赖项。因为包含了大量的科学包，所以Anaconda的安装包比较大。如果为了省时间，也可以使用<strong>Miniconda</strong>这个较小的发行版。</p>
 </div>

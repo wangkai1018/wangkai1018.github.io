@@ -117,6 +117,45 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-android系统特性与平台架构" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2015/09/08/android系统特性与平台架构/">android系统特性与平台架构</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
+</div>
+        <time datetime="2015-09-08T03:47:43.000Z" itemprop="datePublished" class="post-tiem">
+  2015-09-08
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent">
+        
+          <h3 id="1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"><a href="#1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）" class="headerlink" title="1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"></a>1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）</h3><h3 id="2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"><a href="#2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎" class="headerlink" title="2.Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"></a>2.<code>Dalvik</code>虚拟机：专门为移动设备优化；集成的浏览器：<code>webkit</code>引擎</h3><h3 id="3-sqlite结构化的数据存储"><a href="#3-sqlite结构化的数据存储" class="headerlink" title="3.sqlite结构化的数据存储"></a>3.<code>sqlite</code>结构化的数据存储</h3><h3 id="4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等"><a href="#4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等" class="headerlink" title="4.优化的图形库，多媒体支持，GSM电话技术，蓝牙等"></a>4.优化的图形库，多媒体支持，<code>GSM</code>电话技术，蓝牙等</h3><h3 id="5-采用软件叠层方式构建"><a href="#5-采用软件叠层方式构建" class="headerlink" title="5.采用软件叠层方式构建"></a>5.采用软件叠层方式构建</h3><hr>
+<h1 id="android平台架构："><a href="#android平台架构：" class="headerlink" title="android平台架构："></a>android平台架构：</h1><h3 id="1-application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。"><a href="#1-application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。" class="headerlink" title="1.application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。"></a>1.<code>application</code>：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。</h3><h3 id="2-application-framework-应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现"><a href="#2-application-framework-应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现" class="headerlink" title="2.application framework:应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现"></a>2.<code>application framework</code>:应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（<code>telephonyManager</code>）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现</h3><h3 id="3-libraries-库-android-Runtime-android运行时-：android提供了一些c和c-库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集-Dalvik虚拟机构成，Dalvik虚拟机是针对-移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–-dex文件—–Dalvik则运行-dex文件"><a href="#3-libraries-库-android-Runtime-android运行时-：android提供了一些c和c-库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集-Dalvik虚拟机构成，Dalvik虚拟机是针对-移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–-dex文件—–Dalvik则运行-dex文件" class="headerlink" title="3.libraries(库)+android Runtime(android运行时)：android提供了一些c和c++库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集+Dalvik虚拟机构成，Dalvik虚拟机是针对 移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–.dex文件—–Dalvik则运行.dex文件"></a>3.<code>libraries</code>(库)+android Runtime(android运行时)：android提供了一些c和c++库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集+Dalvik虚拟机构成，Dalvik虚拟机是针对 移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–.dex文件—–Dalvik则运行.dex文件</h3><h3 id="4-linux内核-这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。"><a href="#4-linux内核-这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。" class="headerlink" title="4.linux内核  这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。"></a>4.<code>linux</code>内核  这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。</h3><hr>
+<h1 id="相关术语的解析："><a href="#相关术语的解析：" class="headerlink" title="相关术语的解析："></a>相关术语的解析：</h1><h3 id="1-Dalvik-android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。"><a href="#1-Dalvik-android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。" class="headerlink" title="1.Dalvik:android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。"></a>1.Dalvik:android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。</h3><h3 id="2-AVD：android虚拟设备，模拟器"><a href="#2-AVD：android虚拟设备，模拟器" class="headerlink" title="2.AVD：android虚拟设备，模拟器"></a>2.<code>AVD</code>：android虚拟设备，模拟器</h3><h3 id="3-SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb-exe"><a href="#3-SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb-exe" class="headerlink" title="3.SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb.exe"></a>3.<code>SDK</code>：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb.exe</h3><h3 id="4-DDMS-安卓调试工具"><a href="#4-DDMS-安卓调试工具" class="headerlink" title="4.DDMS:安卓调试工具"></a>4.<code>DDMS</code>:安卓调试工具</h3><h3 id="5-DX工具：将class文件转换成-dex文件。"><a href="#5-DX工具：将class文件转换成-dex文件。" class="headerlink" title="5.DX工具：将class文件转换成.dex文件。"></a>5.DX工具：将class文件转换成.dex文件。</h3><h3 id="6-AAPT：android资源打包工具"><a href="#6-AAPT：android资源打包工具" class="headerlink" title="6.AAPT：android资源打包工具"></a>6.<code>AAPT</code>：android资源打包工具</h3><h3 id="7-adb：android调试桥，命令行必备。"><a href="#7-adb：android调试桥，命令行必备。" class="headerlink" title="7.adb：android调试桥，命令行必备。"></a>7.<code>adb</code>：android调试桥，命令行必备。</h3><h3 id="8-R-java-有aapt工具根据APP中的资源文件自动生成，可以理解为"><a href="#8-R-java-有aapt工具根据APP中的资源文件自动生成，可以理解为" class="headerlink" title="8.R.java:有aapt工具根据APP中的资源文件自动生成，可以理解为"></a>8.<code>R.java</code>:有aapt工具根据APP中的资源文件自动生成，可以理解为</h3><h3 id="9-androidManifest-xml：APP的包名、组件生命、程序兼容的最低版本-所需的权限的配置文件。"><a href="#9-androidManifest-xml：APP的包名、组件生命、程序兼容的最低版本-所需的权限的配置文件。" class="headerlink" title="9.androidManifest.xml：APP的包名、组件生命、程序兼容的最低版本+所需的权限的配置文件。"></a>9.<code>androidManifest.xml</code>：APP的包名、组件生命、程序兼容的最低版本+所需的权限的配置文件。</h3>
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2015/09/08/android系统特性与平台架构/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-android-ADB-常用命令" class="article article-type-post" itemscope="" itemprop="blogPost">
     
       
