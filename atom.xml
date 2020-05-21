@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.codingevo.com/"/>
-  <updated>2020-05-21T07:45:00.494Z</updated>
+  <updated>2020-05-21T09:27:26.707Z</updated>
   <id>http://www.codingevo.com/</id>
   
   <author>
@@ -21,24 +21,25 @@
     <link href="http://www.codingevo.com/2020/05/21/nodejs%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.codingevo.com/2020/05/21/nodejs的使用/</id>
     <published>2020-05-21T05:27:35.000Z</published>
-    <updated>2020-05-21T07:45:00.494Z</updated>
+    <updated>2020-05-21T09:27:26.707Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="NodeJS的使用"><a href="#NodeJS的使用" class="headerlink" title="NodeJS的使用"></a>NodeJS的使用</h2><p>###NodeJS基本命令</p><pre><code>console.log(&quot;Hello World&quot;);   #脚本模式node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行node -v                 #查看node版本</code></pre><h3 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h3><p>npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署的很多问题，常见的使用场景有以下几种：</p><ul><li>允许用户从npm服务器下载别人编写的第三方包到本地使用</li><li>允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用</li><li>允许用户自己将自己编写的包或命令行程序上传到npm服务器供别人使用</li></ul><h4 id="npm的基本命令"><a href="#npm的基本命令" class="headerlink" title="npm的基本命令"></a>npm的基本命令</h4><pre><code>npm -v                     #查看版本sudo npm install npm -g    #升级npm版本npm install npm -g         #windows版本的升级命令npm install -g cnpm --registry=https://registry.npm.taobao.org    #使用淘宝镜像源升级npm install &lt;Module Name&gt;    #安装指定模块npm install express          # 本地安装npm install express -g     # 全局安装npm list -g                #查看全局安装的模块npm list  &lt;-g&gt; &lt;Module Name&gt;       #查看指定(本地或全局)模块的版本号npm unistall &lt;Module Name&gt;  #卸载指定的模块npm search &lt;Module Name&gt;    #搜索指定模块npm update &lt;Module Name&gt;   #更新全部或指定模块npm help   #查看帮助文档npm cache clear  #可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发布过的某个版本代码</code></pre><h4 id="创建自己的模块"><a href="#创建自己的模块" class="headerlink" title="创建自己的模块"></a>创建自己的模块</h4><p>这个属于进阶内容，有自己想弄的模块在说吧</p><p>-<br>本文摘抄自<a href="https://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">菜鸟教程</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="NPM的使用"><a href="#NPM的使用" class="headerlink" title="NPM的使用"></a>NPM的使用</h2><h3 id="NodeJS基本命令"><a href="#NodeJS基本命令" class="headerlink" title="NodeJS基本命令"></a>NodeJS基本命令</h3><pre><code>console.log(&quot;Hello World&quot;);   #脚本模式node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行node -v                 #查看node版本</code></pre><h3 id="NPM的使用-1"><a href="#NPM的使用-1" class="headerlink" title="NPM的使用"></a>NPM的使用</h3><p><strong>npm</strong>是随同<strong><em>NodeJS</em></strong>一起安装的包管理工具，能解决NodeJS代码部署的很多问题，常见的使用场景有以下几种：</p><ul><li>允许用户从npm服务器下载别人编写的第三方包到本地使用</li><li>允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用</li><li>允许用户自己将自己编写的包或命令行程序上传到npm服务器供别人使用</li></ul><h4 id="npm的基本命令"><a href="#npm的基本命令" class="headerlink" title="npm的基本命令"></a>npm的基本命令</h4><pre><code>npm -v                     #查看版本sudo npm install npm -g    #升级npm版本npm install npm -g         #windows版本的升级命令npm install -g cnpm --registry=https://registry.npm.taobao.org    #使用淘宝镜像源升级npm install &lt;Module Name&gt;    #安装指定模块npm install express          # 本地安装npm install express -g     # 全局安装npm list -g                #查看全局安装的模块npm list  &lt;-g&gt; &lt;Module Name&gt;       #查看指定(本地或全局)模块的版本号npm unistall &lt;Module Name&gt;  #卸载指定的模块npm search &lt;Module Name&gt;    #搜索指定模块npm update &lt;Module Name&gt;   #更新全部或指定模块npm help   #查看帮助文档npm cache clear  #可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发布过的某个版本代码</code></pre><h4 id="npm镜像源管理"><a href="#npm镜像源管理" class="headerlink" title="npm镜像源管理"></a>npm镜像源管理</h4><ul><li>npm修改配置文件<ul><li>步骤如下：<ol><li>查看<em>npm</em>源地址：<code>npm config list</code>   </li><li>修改registry地址，比如修改为淘宝镜像源：  <code>npm set registry https://registry.npm.taobao.org/</code></li><li>如果不想用了，想删除：<code>npm config rm registry</code></li></ol></li></ul></li></ul><ul><li>使用定制淘宝定制<strong><em>cnpm</em></strong>代替<strong><em>npm</em></strong><ul><li>步骤如下：<ol><li>全局安装cnpm： <ul><li><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li></ul></li><li>成功后就可以用cnpm安装模块：<ul><li><code>cnpm install [Module Name]</code></li></ul></li></ol></li></ul></li></ul><ul><li>使用<strong><em>nrm</em></strong>专门进行管理和快速切换私人配置的registry,建议全局安装：<ol><li>全局安装：<ul><li><code>npm install nrm -g --save</code></li></ul></li><li>常用命令：<ul><li>查看默认镜像源配置列表：<ul><li><code>nrm ls</code></li></ul></li><li>输入以下命令查看当前使用的是哪个源<ul><li><code>nrm current</code></li></ul></li><li>切换源：<ul><li><code>nrm use cnpm</code></li></ul></li><li>添加私有npm源，并设置别名为qihoo，网址为自定义<ul><li><code>nrm add qihoo http://registry.npm.360.org</code></li></ul></li><li>测试下速度<ul><li><code>nrm test npm</code>  </li></ul></li><li>删除npm的源配置<ul><li>nrm del qihoo</li></ul></li></ul></li></ol></li></ul><h4 id="创建自己的模块"><a href="#创建自己的模块" class="headerlink" title="创建自己的模块"></a>创建自己的模块</h4><p>这个属于进阶内容，有自己想弄的模块在说吧</p><p>-</p><blockquote><p>本文摘抄自<a href="https://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://www.jianshu.com/p/66f97cadd1eb" target="_blank" rel="noopener">简书四月天__</a></p></blockquote>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;NodeJS的使用&quot;&gt;&lt;a href=&quot;#NodeJS的使用&quot; class=&quot;headerlink&quot; title=&quot;NodeJS的使用&quot;&gt;&lt;/a&gt;NodeJS的使用&lt;/h2&gt;&lt;p&gt;###NodeJS基本命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;console.log(&amp;
+        &lt;h2 id=&quot;NPM的使用&quot;&gt;&lt;a href=&quot;#NPM的使用&quot; class=&quot;headerlink&quot; title=&quot;NPM的使用&quot;&gt;&lt;/a&gt;NPM的使用&lt;/h2&gt;&lt;h3 id=&quot;NodeJS基本命令&quot;&gt;&lt;a href=&quot;#NodeJS基本命令&quot; class=&quot;headerli
       
     
     </summary>
     
     
-      <category term="nodejs" scheme="http://www.codingevo.com/tags/nodejs/"/>
-    
       <category term="笔记" scheme="http://www.codingevo.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="NodeJS" scheme="http://www.codingevo.com/tags/NodeJS/"/>
+    
+      <category term="NPM" scheme="http://www.codingevo.com/tags/NPM/"/>
     
   </entry>
   
@@ -97,9 +98,9 @@
     <link href="http://www.codingevo.com/2020/04/30/NVM%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://www.codingevo.com/2020/04/30/NVM的使用/</id>
     <published>2020-04-30T09:56:12.000Z</published>
-    <updated>2020-05-21T05:31:54.540Z</updated>
+    <updated>2020-05-21T08:43:44.473Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h1><h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><p><strong>nodejs</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p><pre><code>nvm ls-remote：     列出所有可以安装的node版本号nvm install v10.4.0：安装指定版本号的nodenvm use v10.3.0：   切换node的版本，这个是全局的nvm current：        当前node版本nvm ls：                列出所有已经安装的node版本nvm uninstall          删除已安装的指定版本，语法与install类似nvm alias               给不同的版本号添加别名nvm unalias            删除已定义的别名nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包nvm list available    查看可以安装的版本</code></pre><p><strong>安装</strong></p><ul><li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li><li>或者用homebrew 直接搜索nvm，进行安装</li></ul><p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p><p><strong>国内源镜像</strong></p><p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p><ol><li>在终端中打开<code>vim ~/.zshrc</code></li><li>在配置文件中增加<code>export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</code></li><li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li><li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li></ol><p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p><p>摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h1><h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><p><strong>nodejs</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p><pre><code>nvm ls-remote：     列出所有可以安装的node版本号nvm install v10.4.0：安装指定版本号的nodenvm use v10.3.0：   切换node的版本，这个是全局的nvm current：        当前node版本nvm ls：                列出所有已经安装的node版本nvm uninstall          删除已安装的指定版本，语法与install类似nvm alias               给不同的版本号添加别名nvm unalias            删除已定义的别名nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包nvm list available    查看可以安装的版本</code></pre><p><strong>安装</strong></p><ul><li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li><li>或者用homebrew 直接搜索nvm，进行安装</li></ul><p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p><p><strong>国内源镜像</strong></p><p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p><ol><li>在终端中打开<code>vim ~/.zshrc</code></li><li>在配置文件中增加<code>export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</code></li><li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li><li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li></ol><p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p><p>-</p><blockquote><p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p></blockquote>]]></content>
     
     <summary type="html">
     

@@ -132,7 +132,7 @@
 
       <div class="post-meat flex-row">
         <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 </div>
         <time datetime="2020-05-21T05:27:35.000Z" itemprop="datePublished" class="post-tiem">
   2020-05-21
@@ -140,11 +140,10 @@
       </div>
       <div class="post-content" itemprop="postContent">
         
-          <h2 id="NodeJS的使用"><a href="#NodeJS的使用" class="headerlink" title="NodeJS的使用"></a>NodeJS的使用</h2><p>###NodeJS基本命令</p>
-<pre><code>console.log(&quot;Hello World&quot;);   #脚本模式
+          <h2 id="NPM的使用"><a href="#NPM的使用" class="headerlink" title="NPM的使用"></a>NPM的使用</h2><h3 id="NodeJS基本命令"><a href="#NodeJS基本命令" class="headerlink" title="NodeJS基本命令"></a>NodeJS基本命令</h3><pre><code>console.log(&quot;Hello World&quot;);   #脚本模式
 node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行
 node -v                 #查看node版本
-</code></pre><h3 id="npm的使用"><a href="#npm的使用" class="headerlink" title="npm的使用"></a>npm的使用</h3><p>npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署的很多问题，常见的使用场景有以下几种：</p>
+</code></pre><h3 id="NPM的使用-1"><a href="#NPM的使用-1" class="headerlink" title="NPM的使用"></a>NPM的使用</h3><p><strong>npm</strong>是随同<strong><em>NodeJS</em></strong>一起安装的包管理工具，能解决NodeJS代码部署的很多问题，常见的使用场景有以下几种：</p>
 <ul>
 <li>允许用户从npm服务器下载别人编写的第三方包到本地使用</li>
 <li>允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用</li>
@@ -165,8 +164,74 @@ npm update &lt;Module Name&gt;   #更新全部或指定模块
 npm help   #查看帮助文档
 npm cache clear  #可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人
 npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发布过的某个版本代码
-</code></pre><h4 id="创建自己的模块"><a href="#创建自己的模块" class="headerlink" title="创建自己的模块"></a>创建自己的模块</h4><p>这个属于进阶内容，有自己想弄的模块在说吧</p>
-<p>-<br>本文摘抄自<a href="https://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+</code></pre><h4 id="npm镜像源管理"><a href="#npm镜像源管理" class="headerlink" title="npm镜像源管理"></a>npm镜像源管理</h4><ul>
+<li>npm修改配置文件<ul>
+<li>步骤如下：<ol>
+<li>查看<em>npm</em>源地址：<code>npm config list</code>   </li>
+<li>修改registry地址，比如修改为淘宝镜像源：  <code>npm set registry https://registry.npm.taobao.org/</code></li>
+<li>如果不想用了，想删除：<code>npm config rm registry</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>使用定制淘宝定制<strong><em>cnpm</em></strong>代替<strong><em>npm</em></strong><ul>
+<li>步骤如下：<ol>
+<li>全局安装cnpm： <ul>
+<li><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
+</ul>
+</li>
+<li>成功后就可以用cnpm安装模块：<ul>
+<li><code>cnpm install [Module Name]</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>使用<strong><em>nrm</em></strong>专门进行管理和快速切换私人配置的registry,建议全局安装：<ol>
+<li>全局安装：<ul>
+<li><code>npm install nrm -g --save</code></li>
+</ul>
+</li>
+<li>常用命令：<ul>
+<li>查看默认镜像源配置列表：<ul>
+<li><code>nrm ls</code></li>
+</ul>
+</li>
+<li>输入以下命令查看当前使用的是哪个源<ul>
+<li><code>nrm current</code></li>
+</ul>
+</li>
+<li>切换源：<ul>
+<li><code>nrm use cnpm</code></li>
+</ul>
+</li>
+<li>添加私有npm源，并设置别名为qihoo，网址为自定义<ul>
+<li><code>nrm add qihoo http://registry.npm.360.org</code></li>
+</ul>
+</li>
+<li>测试下速度<ul>
+<li><code>nrm test npm</code>  </li>
+</ul>
+</li>
+<li>删除npm的源配置<ul>
+<li>nrm del qihoo</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="创建自己的模块"><a href="#创建自己的模块" class="headerlink" title="创建自己的模块"></a>创建自己的模块</h4><p>这个属于进阶内容，有自己想弄的模块在说吧</p>
+<p>-</p>
+<blockquote>
+<p>本文摘抄自<a href="https://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://www.jianshu.com/p/66f97cadd1eb" target="_blank" rel="noopener">简书四月天__</a></p>
+</blockquote>
 
         
       </div>
@@ -683,7 +748,10 @@ nvm list available    查看可以安装的版本
 <li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li>
 </ol>
 <p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
-<p>摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
+<p>-</p>
+<blockquote>
+<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
+</blockquote>
 
         
       </div>
