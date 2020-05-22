@@ -117,14 +117,74 @@
   <ul class="post-list">
   
     <li class="post-list-item">
-  <article id="post-nodejs的使用" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <article id="post-deepin系统踩过的坑" class="article article-type-post" itemscope="" itemprop="blogPost">
     
       
 
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/05/21/nodejs的使用/">NodeJS的使用</a>
+      <a class="post-title-link" href="/2020/05/22/deepin系统踩过的坑/">deepin系统踩过的坑</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deepin/">deepin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度操作系统-linux/">深度操作系统 - linux</a></li></ul>
+</div>
+        <time datetime="2020-05-22T05:27:18.000Z" itemprop="datePublished" class="post-tiem">
+  2020-05-22
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent">
+        
+          <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>记录一下使用deepin深度操作系统遇到的问题。第一次用它是在2015年，朋友帮我安装的；安装在了公司的台式机上，当时没有特别的关注。后来用了苹果mac笔记本。基本上用mac的时间多，在上面也配置了很多的环境。就连windows用的时间都很少了。这个月偶然间想把以前闲置的主机拿来使用。该主机的配置是2016年左右的，要是更新成主流win10系统，配置完全不行。于是我又把deepin系统请了出来。deepin对于低配置的机器比较友好，老机器也能够焕发新颜。本篇主要介绍遇到的问题(坑)。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>首先去<a href="https://www.deepin.org/en/" target="_blank" rel="noopener">deepin官网</a>下载镜像，我下载的版本是<a href="https://www.deepin.org/download/" target="_blank" rel="noopener">deepin 20Beta</a></li>
+<li>在用官方的U盘制作工具制作启动盘。然后插入电脑</li>
+<li>在bios中将U盘设置成第一启动项，进入U盘。后出现安装界面</li>
+<li>安装最开始会设置一些用户名，语言等设置</li>
+<li>最后出现安装位置：<ol>
+<li>全盘安装：没有使用此模式，暂不介绍</li>
+<li>手动安装：我就是在这里遇到了第一批坑<ul>
+<li>安装的磁盘必须有25G以上的空间(满足)</li>
+<li>硬盘上必须有efi分区，而且分区大小要在400M以上</li>
+<li>安装的磁盘：<ul>
+<li>必须选择挂载模式，并且设定根目录为<code>/</code></li>
+<li>建议格式化为ext4格式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>总结：</p>
+<p>第一个问题就是必须有efi分区。我是由于硬盘不小心全盘格式化了，所有分区都没了，并没有创建efi分区。随后我就用pe系统划分了200M的efi分区，因为从网上看，一般的该分区200多M就差不多了。然后从新U盘安装，才说efi分区必须在400M以上。又从新折腾划分为400M。这次efi分区问题解决了，然后就是选择安装的磁盘位置了。选择好后，一开始随便选了一个挂载设置，提示必须为根目录<code>/</code>,然后问题解决了。最后走完了安装阶段，安装成功。<br>说实话对efi分区这块不是很懂，所以传统引导模式和uefi引导的区别，更是无从得知。所以能安装好也属侥幸。</p>
+<h2 id="学习环境的配置"><a href="#学习环境的配置" class="headerlink" title="学习环境的配置"></a>学习环境的配置</h2>
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2020/05/22/deepin系统踩过的坑/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
+  <article id="post-NPM的使用" class="article article-type-post" itemscope="" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/21/NPM的使用/">NPM的使用</a>
     </h3>
   
 
@@ -164,6 +224,7 @@ npm update &lt;Module Name&gt;   #更新全部或指定模块
 npm help   #查看帮助文档
 npm cache clear  #可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人
 npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发布过的某个版本代码
+  sudo npm cache clean -f   #清除node的cache（清除node的缓存，这个看情况而定，不是必须的）
 </code></pre><h4 id="npm镜像源管理"><a href="#npm镜像源管理" class="headerlink" title="npm镜像源管理"></a>npm镜像源管理</h4><ul>
 <li>npm修改配置文件<ul>
 <li>步骤如下：<ol>
@@ -219,7 +280,7 @@ npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发
 </ul>
 </li>
 <li>删除npm的源配置<ul>
-<li>nrm del qihoo</li>
+<li><code>nrm del qihoo</code></li>
 </ul>
 </li>
 </ul>
@@ -236,7 +297,7 @@ npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发
         
       </div>
       <div class="post-footer clearfix">
-        <a href="/2020/05/21/nodejs的使用/" class="post-more waves-button-light">MORE</a>
+        <a href="/2020/05/21/NPM的使用/" class="post-more waves-button-light">MORE</a>
       </div>
     
 
@@ -714,7 +775,7 @@ print(&apos;每个人的工资增加9000元\n{0}&apos;.format(df1))
 
       <div class="post-meat flex-row">
         <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记-NVM/">笔记 - NVM</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
 </div>
         <time datetime="2020-04-30T09:56:12.000Z" itemprop="datePublished" class="post-tiem">
   2020-04-30
@@ -722,7 +783,7 @@ print(&apos;每个人的工资增加9000元\n{0}&apos;.format(df1))
       </div>
       <div class="post-content" itemprop="postContent">
         
-          <h1 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h1><h2 id="nvm"><a href="#nvm" class="headerlink" title="nvm"></a>nvm</h2><p><strong>nodejs</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p>
+          <h2 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h2><p><strong>NodeJS</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p>
 <pre><code>nvm ls-remote：     列出所有可以安装的node版本号
 nvm install v10.4.0：安装指定版本号的node
 nvm use v10.3.0：   切换node的版本，这个是全局的
@@ -987,7 +1048,7 @@ Header 2
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#114;&#x61;&#x6e;&#117;&#115;&#106;&#x72;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x75;&#114;&#x61;&#x6e;&#117;&#115;&#106;&#x72;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#x72;&#97;&#110;&#117;&#x73;&#x6a;&#114;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x75;&#x72;&#97;&#110;&#117;&#x73;&#x6a;&#114;&#x40;&#103;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
 <p>Same thing with urls: <a href="http://macdown.uranusjr.com" target="_blank" rel="noopener">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
 <p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
 <h4 id="Reference-style"><a href="#Reference-style" class="headerlink" title="Reference style"></a>Reference style</h4><p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
@@ -1120,61 +1181,6 @@ Header 2
       </div>
       <div class="post-footer clearfix">
         <a href="/2016/08/03/趋势线画法/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-RxJava使用小结" class="article article-type-post" itemscope="" itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/05/14/RxJava使用小结/">RxJava使用小结</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ReactiveX/">ReactiveX</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RxJava/">RxJava</a></li></ul>
-</div>
-        <time datetime="2016-05-14T02:55:03.000Z" itemprop="datePublished" class="post-tiem">
-  2016-05-14
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent">
-        
-          <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>近来一些日子，<code>Reactivex</code>看到的机会越来越多，如雷贯耳，于是乎决定亲自撸一遍，记录一下自己遇到的坑</p>
-<p>###为什么要用Reactivex？</p>
-<ul>
-<li>异步：它是一个实现<code>异步</code>操作的库</li>
-<li>简洁：它可以随着应用程序的越来越复杂的同时，依然保持简洁</li>
-</ul>
-<blockquote>
-<p>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</p>
-</blockquote>
-<p>这是在<a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a>在github主页上的介绍</p>
-<h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><p><code>RxJava</code>的异步实现，是通过扩展的观察者模式实现的。android中比较典型的例子：点击监听器<code>OnClickListener</code>。<code>View</code>是被观察者，<code>OnClickListener</code>是观察者，两者通过<code>setOnClickListener</code>产生关系，<code>Android Framework</code>层会将点击事件发送给注册过的OnClickListener。</p>
-<p>RxJava的四大基本概念</p>
-<ul>
-<li>Observable：被观察者，可观察者</li>
-<li>Observer: 观察者</li>
-<li>Subscribe：订阅</li>
-<li>Event：事件</li>
-</ul>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2016/05/14/RxJava使用小结/" class="post-more waves-button-light">MORE</a>
       </div>
     
 

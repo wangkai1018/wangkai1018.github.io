@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.codingevo.com/2020/05/21/nodejs%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://www.codingevo.com/2020/05/22/deepin%E7%B3%BB%E7%BB%9F%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
     
-    <lastmod>2020-05-21T09:27:26.707Z</lastmod>
+    <lastmod>2020-05-22T12:02:04.201Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2020/05/21/NPM%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2020-05-22T06:59:15.341Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2015/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2020-05-22T01:59:20.355Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.codingevo.com/2020/04/30/NVM%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2020-05-21T08:43:44.473Z</lastmod>
+    <lastmod>2020-05-22T01:52:16.853Z</lastmod>
     
   </url>
   
@@ -86,6 +100,13 @@
   </url>
   
   <url>
+    <loc>http://www.codingevo.com/2018/02/14/MacDown%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</loc>
+    
+    <lastmod>2019-01-28T06:18:46.836Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.codingevo.com/2016/05/14/RxJava%E4%BD%BF%E7%94%A8%E5%B0%8F%E7%BB%93/</loc>
     
     <lastmod>2019-01-28T06:18:46.836Z</lastmod>
@@ -100,21 +121,7 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2018/02/14/MacDown%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</loc>
-    
-    <lastmod>2019-01-28T06:18:46.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.codingevo.com/2015/09/06/android-ADB-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2019-01-28T06:18:46.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://www.codingevo.com/2015/06/08/AndroidStudio%E7%9A%84%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E5%8F%8A%E8%AF%B4%E6%98%8E/</loc>
     
     <lastmod>2019-01-28T06:18:46.835Z</lastmod>
     
@@ -128,7 +135,7 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/08/AndroidStudio%E7%9A%84%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E5%8F%8A%E8%AF%B4%E6%98%8E/</loc>
+    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2019-01-28T06:18:46.835Z</lastmod>
     
