@@ -8,4 +8,5 @@ date: 2021-11-05 01:45:12
 ## 概要
 用于测试多终端同步
 
-用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果
+用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.
+push成功  再测试一下git push -u origin hexo
