@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>pandas使用方法与常用实例 | Coding Evo | karlwk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="笔记,pandas">
+  <meta name="description" content="pandas使用方法与常用实例代码创建表格并输出成文件方法一： 有的功能基于openpyxl模块，如果没有需要用pip安装 import pandas as pd df1=pd.DataFrame({&amp;apos;工资&amp;apos;:[9000,7000,4000,8000,100000],&amp;apos;绩效分&amp;apos;:[86,91,74,83,97],&amp;apos;性别&amp;apos;:[&amp;apos;男">
+<meta name="keywords" content="笔记,pandas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pandas使用方法与常用实例">
+<meta property="og:url" content="http://www.codingevo.com/2020/05/07/pandas常用实例/index.html">
+<meta property="og:site_name" content="Coding Evo">
+<meta property="og:description" content="pandas使用方法与常用实例代码创建表格并输出成文件方法一： 有的功能基于openpyxl模块，如果没有需要用pip安装 import pandas as pd df1=pd.DataFrame({&amp;apos;工资&amp;apos;:[9000,7000,4000,8000,100000],&amp;apos;绩效分&amp;apos;:[86,91,74,83,97],&amp;apos;性别&amp;apos;:[&amp;apos;男">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-11-05T13:39:14.794Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pandas使用方法与常用实例">
+<meta name="twitter:description" content="pandas使用方法与常用实例代码创建表格并输出成文件方法一： 有的功能基于openpyxl模块，如果没有需要用pip安装 import pandas as pd df1=pd.DataFrame({&amp;apos;工资&amp;apos;:[9000,7000,4000,8000,100000],&amp;apos;绩效分&amp;apos;:[86,91,74,83,97],&amp;apos;性别&amp;apos;:[&amp;apos;男">
+  
+    <link rel="alternative" href="/atom.xml" title="Coding Evo" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">karlwk</h5>
+        <a href="mailto:karlwk@codingevo.com" title="karlwk@codingevo.com" class="mail">karlwk@codingevo.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/wangkai1018" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://weibo.com/u/1834790680" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Coding Evo &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">pandas使用方法与常用实例</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">pandas使用方法与常用实例</h1>
+    <h5 class="subtitle">2020-05-07</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-pandas常用实例" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandas/">pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="pandas使用方法与常用实例" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/07/pandas常用实例/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pandas使用方法与常用实例"><span class="post-toc-text">pandas使用方法与常用实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码创建表格并输出成文件"><span class="post-toc-text">代码创建表格并输出成文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格数据的字符串操作"><span class="post-toc-text">表格数据的字符串操作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格中列与列之间的计算"><span class="post-toc-text">表格中列与列之间的计算</span></a></li></ol></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><h2 id="pandas使用方法与常用实例"><a href="#pandas使用方法与常用实例" class="headerlink" title="pandas使用方法与常用实例"></a>pandas使用方法与常用实例</h2><h3 id="代码创建表格并输出成文件"><a href="#代码创建表格并输出成文件" class="headerlink" title="代码创建表格并输出成文件"></a>代码创建表格并输出成文件</h3><p><strong>方法一</strong>：</p>
+<p>有的功能基于openpyxl模块，如果没有需要用pip安装</p>
+<pre><code>import pandas as pd
+df1=pd.DataFrame({&apos;工资&apos;:[9000,7000,4000,8000,100000],&apos;绩效分&apos;:[86,91,74,83,97],&apos;性别&apos;:[&apos;男&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;]},index=[&apos;~王闵京&apos;,&apos;~陈红英&apos;,&apos;~张秀影&apos;,&apos;~王春芳&apos;,&apos;~陈春月&apos;])
+print(df1)
+#将数据保存成表格文件
+writer=pd.ExcelWriter(&apos;my2.xlsx&apos;) 
+df1.to_excel(writer,float_format=&apos;%.5f&apos;)
+writer.save()
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">9000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">~男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">7000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">4000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">8000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">~女</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法二</strong>：</p>
+<p>此方法需要导入numpy、openpyxl模块</p>
+<pre><code>import pandas as pd
+import numpy as np
+data = np.arange(1,101).reshape((10,10))
+data_df = pd.DataFrame(data)
+data_df.columns = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;,&apos;E&apos;,&apos;F&apos;,&apos;G&apos;,&apos;H&apos;,&apos;I&apos;,&apos;J&apos;]
+data_df.index = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,&apos;f&apos;,&apos;g&apos;,&apos;h&apos;,&apos;i&apos;,&apos;j&apos;]
+priint(data_df)
+writer = pd.ExcelWriter(&apos;my.xlsx&apos;)
+data_df.to_excel(writer,float_format=&apos;%.5f&apos;)
+writer.save()
+————————————————
+原文链接：https://blog.csdn.net/weixin_44285988/article/details/89156876
+</code></pre><table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>b</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+</tr>
+<tr>
+<td>c</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+<td>29</td>
+<td>30</td>
+</tr>
+<tr>
+<td>d</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>35</td>
+<td>36</td>
+<td>37</td>
+<td>38</td>
+<td>39</td>
+<td>40</td>
+</tr>
+<tr>
+<td>e</td>
+<td>41</td>
+<td>42</td>
+<td>43</td>
+<td>44</td>
+<td>45</td>
+<td>46</td>
+<td>47</td>
+<td>48</td>
+<td>49</td>
+<td>50</td>
+</tr>
+<tr>
+<td>f</td>
+<td>51</td>
+<td>52</td>
+<td>53</td>
+<td>54</td>
+<td>55</td>
+<td>56</td>
+<td>57</td>
+<td>58</td>
+<td>59</td>
+<td>60</td>
+</tr>
+<tr>
+<td>g</td>
+<td>61</td>
+<td>62</td>
+<td>63</td>
+<td>64</td>
+<td>65</td>
+<td>66</td>
+<td>67</td>
+<td>68</td>
+<td>69</td>
+<td>70</td>
+</tr>
+<tr>
+<td>h</td>
+<td>71</td>
+<td>72</td>
+<td>73</td>
+<td>74</td>
+<td>75</td>
+<td>76</td>
+<td>77</td>
+<td>78</td>
+<td>79</td>
+<td>80</td>
+</tr>
+<tr>
+<td>i</td>
+<td>81</td>
+<td>82</td>
+<td>83</td>
+<td>84</td>
+<td>85</td>
+<td>86</td>
+<td>87</td>
+<td>88</td>
+<td>89</td>
+<td>90</td>
+</tr>
+<tr>
+<td>j</td>
+<td>91</td>
+<td>92</td>
+<td>93</td>
+<td>94</td>
+<td>95</td>
+<td>96</td>
+<td>97</td>
+<td>98</td>
+<td>99</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>-</p>
+<h3 id="表格数据的字符串操作"><a href="#表格数据的字符串操作" class="headerlink" title="表格数据的字符串操作"></a>表格数据的字符串操作</h3><p>例如表格中的某列数据中都有各种前缀想进行统一更改的时候，这时字符串的替换操作就可以大显身手了，pandas对字符串的操作和python几乎一样，只要调用数据的<code>.str</code>方法就可以了</p>
+<pre><code>df1[&apos;性别&apos;]=df1[&apos;性别&apos;].str.replace(&apos;~&apos;,&apos;&apos;)#编辑性别的列
+print(&apos;我是替换后的数据\n{0}&apos;.format(df1))
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">9000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">7000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">4000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">8000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<h3 id="表格中列与列之间的计算"><a href="#表格中列与列之间的计算" class="headerlink" title="表格中列与列之间的计算"></a>表格中列与列之间的计算</h3><p>接上表格，把所有人的工资增加9000</p>
+<pre><code>df1[&apos;工资&apos;]=df1[&apos;工资&apos;]+9000#每个人的工资增加9000
+print(&apos;每个人的工资增加9000元\n{0}&apos;.format(df1))
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">18000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">16000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">13000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">17000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">109000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<p>列之间的计算都是数值类型进行的。如果数据中包含非数值类型的字符和符号，要先把其转换为数值类型在进行计算；例如：数据中有%</p>
+</div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+      <a href="/2020/05/21/NPM的使用/" title="NPM的使用" id="post-prev" class="post-nav-link">
+        <i class="icon icon-chevron-left"></i>
+        <span class="article-nav-title">上一篇</span>
+      </a>
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2020/05/07/python的pandas基础/" title="python的pandas基础" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="pandas常用实例" data-title="pandas使用方法与常用实例" data-url="http://www.codingevo.com/2020/05/07/pandas常用实例/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="pandas使用方法与常用实例" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/07/pandas常用实例/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
