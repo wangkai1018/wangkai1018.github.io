@@ -13,3 +13,4 @@ push成功  再测试一下git push -u origin hexo    成功！
 测试push简化操作   git push 
 全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了
 
+现在到mac上了
