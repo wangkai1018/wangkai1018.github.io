@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.codingevo.com/"/>
-  <updated>2021-11-06T06:01:03.898Z</updated>
+  <updated>2021-11-06T14:23:13.218Z</updated>
   <id>http://www.codingevo.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.codingevo.com/2021/11/05/win10%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%94%9F%E6%88%90%E6%B5%8B%E8%AF%95/"/>
     <id>http://www.codingevo.com/2021/11/05/win10客户端生成测试/</id>
     <published>2021-11-04T17:45:12.000Z</published>
-    <updated>2021-11-06T06:01:03.898Z</updated>
+    <updated>2021-11-06T14:23:13.218Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>用于测试多终端同步</p><p>用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.<br>push成功  再测试一下git push -u origin hexo    成功！<br>测试push简化操作   git push<br>全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了</p><p>现在到mac上了</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>用于测试多终端同步</p><p>用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.<br>push成功  再测试一下git push -u origin hexo    成功！<br>测试push简化操作   git push<br>全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了</p><p>现在到mac上了</p><p>mac上的nodejs 是v12.16.3版本<br>windows上的是V16版本<br>mac上更新到最新V17版本之后，也不能部署了，又恢复到了V12版本，才可以继续使用</p>]]></content>
     
     <summary type="html">
     
