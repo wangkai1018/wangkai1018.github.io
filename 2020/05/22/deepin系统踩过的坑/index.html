@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>deepin系统踩过的坑 | Coding Evo | karlwk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="deepin,深度操作系统 - linux">
+  <meta name="description" content="起因记录一下使用deepin深度操作系统遇到的问题。第一次用它是在2015年，朋友帮我安装的；安装在了公司的台式机上，当时没有特别的关注。后来用了苹果mac笔记本。基本上用mac的时间多，在上面也配置了很多的环境。就连windows用的时间都很少了。这个月偶然间想把以前闲置的主机拿来使用。该主机的配置是2016年左右的，要是更新成主流win10系统，配置完全不行。于是我又把deepin系统请了出来">
+<meta name="keywords" content="deepin,深度操作系统 - linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="deepin系统踩过的坑">
+<meta property="og:url" content="http://www.codingevo.com/2020/05/22/deepin系统踩过的坑/index.html">
+<meta property="og:site_name" content="Coding Evo">
+<meta property="og:description" content="起因记录一下使用deepin深度操作系统遇到的问题。第一次用它是在2015年，朋友帮我安装的；安装在了公司的台式机上，当时没有特别的关注。后来用了苹果mac笔记本。基本上用mac的时间多，在上面也配置了很多的环境。就连windows用的时间都很少了。这个月偶然间想把以前闲置的主机拿来使用。该主机的配置是2016年左右的，要是更新成主流win10系统，配置完全不行。于是我又把deepin系统请了出来">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-11-05T13:39:14.793Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="deepin系统踩过的坑">
+<meta name="twitter:description" content="起因记录一下使用deepin深度操作系统遇到的问题。第一次用它是在2015年，朋友帮我安装的；安装在了公司的台式机上，当时没有特别的关注。后来用了苹果mac笔记本。基本上用mac的时间多，在上面也配置了很多的环境。就连windows用的时间都很少了。这个月偶然间想把以前闲置的主机拿来使用。该主机的配置是2016年左右的，要是更新成主流win10系统，配置完全不行。于是我又把deepin系统请了出来">
+  
+    <link rel="alternative" href="/atom.xml" title="Coding Evo" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">karlwk</h5>
+        <a href="mailto:karlwk@codingevo.com" title="karlwk@codingevo.com" class="mail">karlwk@codingevo.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/wangkai1018" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://weibo.com/u/1834790680" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Coding Evo &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">deepin系统踩过的坑</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">deepin系统踩过的坑</h1>
+    <h5 class="subtitle">2020-05-22</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-deepin系统踩过的坑" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deepin/">deepin</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/深度操作系统-linux/">深度操作系统 - linux</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="deepin系统踩过的坑" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/22/deepin系统踩过的坑/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#起因"><span class="post-toc-text">起因</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#学习环境的配置"><span class="post-toc-text">学习环境的配置</span></a></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>记录一下使用deepin深度操作系统遇到的问题。第一次用它是在2015年，朋友帮我安装的；安装在了公司的台式机上，当时没有特别的关注。后来用了苹果mac笔记本。基本上用mac的时间多，在上面也配置了很多的环境。就连windows用的时间都很少了。这个月偶然间想把以前闲置的主机拿来使用。该主机的配置是2016年左右的，要是更新成主流win10系统，配置完全不行。于是我又把deepin系统请了出来。deepin对于低配置的机器比较友好，老机器也能够焕发新颜。本篇主要介绍遇到的问题(坑)。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol>
+<li>首先去<a href="https://www.deepin.org/en/" target="_blank" rel="noopener">deepin官网</a>下载镜像，我下载的版本是<a href="https://www.deepin.org/download/" target="_blank" rel="noopener">deepin 20Beta</a></li>
+<li>在用官方的U盘制作工具制作启动盘。然后插入电脑</li>
+<li>在bios中将U盘设置成第一启动项，进入U盘。后出现安装界面</li>
+<li>安装最开始会设置一些用户名，语言等设置</li>
+<li>最后出现安装位置：<ol>
+<li>全盘安装：没有使用此模式，暂不介绍</li>
+<li>手动安装：我就是在这里遇到了第一批坑<ul>
+<li>安装的磁盘必须有25G以上的空间(满足)</li>
+<li>硬盘上必须有efi分区，而且分区大小要在400M以上</li>
+<li>安装的磁盘：<ul>
+<li>必须选择挂载模式，并且设定根目录为<code>/</code></li>
+<li>建议格式化为ext4格式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<p>总结：</p>
+<p>第一个问题就是必须有efi分区。我是由于硬盘不小心全盘格式化了，所有分区都没了，并没有创建efi分区。随后我就用pe系统划分了200M的efi分区，因为从网上看，一般的该分区200多M就差不多了。然后从新U盘安装，才说efi分区必须在400M以上。又从新折腾划分为400M。这次efi分区问题解决了，然后就是选择安装的磁盘位置了。选择好后，一开始随便选了一个挂载设置，提示必须为根目录<code>/</code>,然后问题解决了。最后走完了安装阶段，安装成功。<br>说实话对efi分区这块不是很懂，所以传统引导模式和uefi引导的区别，更是无从得知。所以能安装好也属侥幸。</p>
+<h2 id="学习环境的配置"><a href="#学习环境的配置" class="headerlink" title="学习环境的配置"></a>学习环境的配置</h2></div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+      <a href="/2020/05/25/Iterm2快捷键/" title="Iterm2快捷键" id="post-prev" class="post-nav-link">
+        <i class="icon icon-chevron-left"></i>
+        <span class="article-nav-title">上一篇</span>
+      </a>
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2020/05/21/NPM的使用/" title="NPM的使用" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="deepin系统踩过的坑" data-title="deepin系统踩过的坑" data-url="http://www.codingevo.com/2020/05/22/deepin系统踩过的坑/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="deepin系统踩过的坑" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/22/deepin系统踩过的坑/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

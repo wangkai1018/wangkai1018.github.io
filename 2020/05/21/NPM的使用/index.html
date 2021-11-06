@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>NPM的使用 | Coding Evo | karlwk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="笔记,NodeJS,NPM">
+  <meta name="description" content="NPM的使用NodeJS基本命令console.log(&amp;quot;Hello World&amp;quot;);   #脚本模式 node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行 node -v                 #查看node版本 NPM的使用npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代">
+<meta name="keywords" content="笔记,NodeJS,NPM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPM的使用">
+<meta property="og:url" content="http://www.codingevo.com/2020/05/21/NPM的使用/index.html">
+<meta property="og:site_name" content="Coding Evo">
+<meta property="og:description" content="NPM的使用NodeJS基本命令console.log(&amp;quot;Hello World&amp;quot;);   #脚本模式 node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行 node -v                 #查看node版本 NPM的使用npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-11-05T13:39:14.791Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NPM的使用">
+<meta name="twitter:description" content="NPM的使用NodeJS基本命令console.log(&amp;quot;Hello World&amp;quot;);   #脚本模式 node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行 node -v                 #查看node版本 NPM的使用npm是随同NodeJS一起安装的包管理工具，能解决NodeJS代">
+  
+    <link rel="alternative" href="/atom.xml" title="Coding Evo" type="application/atom+xml">
+  
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="loading" class="active"></div>
+
+  <nav id="menu" class="hide" >
+   <div class="inner">
+  <a href="javascript:;" class="header-icon waves-circle-light" id="menu-off">
+      <i class="icon icon-lg icon-close"></i>
+  </a>
+  <div class="brand-wrap">
+    <div class="brand">
+      <a href="/" class="avatar"><img src="/img/logo.png"></a>
+      <hgroup class="introduce">
+        <h5 class="nickname">karlwk</h5>
+        <a href="mailto:karlwk@codingevo.com" title="karlwk@codingevo.com" class="mail">karlwk@codingevo.com</a>
+      </hgroup>
+    </div>
+  </div>
+  <ul class="nav">
+    
+        <li class="waves-block">
+          <a href="/"  >
+            <i class="icon icon-lg icon-home"></i>
+            主页
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/archives"  >
+            <i class="icon icon-lg icon-archives"></i>
+            Archives
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="/tags"  >
+            <i class="icon icon-lg icon-tags"></i>
+            Tags
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="https://github.com/wangkai1018" target="_blank" >
+            <i class="icon icon-lg icon-github"></i>
+            Github
+          </a>
+        </li>
+    
+        <li class="waves-block">
+          <a href="http://weibo.com/u/1834790680" target="_blank" >
+            <i class="icon icon-lg icon-weibo"></i>
+            Weibo
+          </a>
+        </li>
+    
+  </ul>
+
+  <footer class="footer">
+  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
+  <p>Coding Evo &copy; 2021</p>
+  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+</footer>
+
+</div>
+
+  </nav>
+  <main id="main">
+    <header class="header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-circle-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">NPM的使用</div>
+        
+        <a href="javascript:;" class="header-icon waves-circle-light" id="menu-share">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header">
+  <div class="container">
+    <h1 class="author">NPM的使用</h1>
+    <h5 class="subtitle">2020-05-21</h5>
+  </div>
+</header>
+
+    <div class="container body-wrap">
+      
+  <article id="post-NPM的使用" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NPM/">NPM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+      </div>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share" data-title="NPM的使用" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/21/NPM的使用/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#NPM的使用"><span class="post-toc-text">NPM的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NodeJS基本命令"><span class="post-toc-text">NodeJS基本命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NPM的使用-1"><span class="post-toc-text">NPM的使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#npm的基本命令"><span class="post-toc-text">npm的基本命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#npm镜像源管理"><span class="post-toc-text">npm镜像源管理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#创建自己的模块"><span class="post-toc-text">创建自己的模块</span></a></li></ol></li></ol></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" itemprop="postContent"><h2 id="NPM的使用"><a href="#NPM的使用" class="headerlink" title="NPM的使用"></a>NPM的使用</h2><h3 id="NodeJS基本命令"><a href="#NodeJS基本命令" class="headerlink" title="NodeJS基本命令"></a>NodeJS基本命令</h3><pre><code>console.log(&quot;Hello World&quot;);   #脚本模式
+node helloworld.js      #保存该文件，文件名为 helloworld.js， 并通过 node命令来执行
+node -v                 #查看node版本
+</code></pre><h3 id="NPM的使用-1"><a href="#NPM的使用-1" class="headerlink" title="NPM的使用"></a>NPM的使用</h3><p><strong>npm</strong>是随同<strong><em>NodeJS</em></strong>一起安装的包管理工具，能解决NodeJS代码部署的很多问题，常见的使用场景有以下几种：</p>
+<ul>
+<li>允许用户从npm服务器下载别人编写的第三方包到本地使用</li>
+<li>允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用</li>
+<li>允许用户自己将自己编写的包或命令行程序上传到npm服务器供别人使用</li>
+</ul>
+<h4 id="npm的基本命令"><a href="#npm的基本命令" class="headerlink" title="npm的基本命令"></a>npm的基本命令</h4><pre><code>npm -v                     #查看版本
+sudo npm install npm -g    #升级npm版本
+npm install npm -g         #windows版本的升级命令
+npm install -g cnpm --registry=https://registry.npm.taobao.org    #使用淘宝镜像源升级
+npm install &lt;Module Name&gt;    #安装指定模块
+npm install express          # 本地安装
+npm install express -g     # 全局安装
+npm list -g                #查看全局安装的模块
+npm list  &lt;-g&gt; &lt;Module Name&gt;       #查看指定(本地或全局)模块的版本号
+npm unistall &lt;Module Name&gt;  #卸载指定的模块
+npm search &lt;Module Name&gt;    #搜索指定模块
+npm update &lt;Module Name&gt;   #更新全部或指定模块
+npm help   #查看帮助文档
+npm cache clear  #可以清空NPM本地缓存，用于对付使用相同版本号发布新版本代码的人
+npm unpublish &lt;Module Name&gt;@&lt;version&gt;   #可以撤销发布自己发布过的某个版本代码
+  sudo npm cache clean -f   #清除node的cache（清除node的缓存，这个看情况而定，不是必须的）
+</code></pre><h4 id="npm镜像源管理"><a href="#npm镜像源管理" class="headerlink" title="npm镜像源管理"></a>npm镜像源管理</h4><ul>
+<li>npm修改配置文件<ul>
+<li>步骤如下：<ol>
+<li>查看<em>npm</em>源地址：<code>npm config list</code>   </li>
+<li>修改registry地址，比如修改为淘宝镜像源：  <code>npm set registry https://registry.npm.taobao.org/</code></li>
+<li>如果不想用了，想删除：<code>npm config rm registry</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>使用定制淘宝定制<strong><em>cnpm</em></strong>代替<strong><em>npm</em></strong><ul>
+<li>步骤如下：<ol>
+<li>全局安装cnpm： <ul>
+<li><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
+</ul>
+</li>
+<li>成功后就可以用cnpm安装模块：<ul>
+<li><code>cnpm install [Module Name]</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>使用<strong><em>nrm</em></strong>专门进行管理和快速切换私人配置的registry,建议全局安装：<ol>
+<li>全局安装：<ul>
+<li><code>npm install nrm -g --save</code></li>
+</ul>
+</li>
+<li>常用命令：<ul>
+<li>查看默认镜像源配置列表：<ul>
+<li><code>nrm ls</code></li>
+</ul>
+</li>
+<li>输入以下命令查看当前使用的是哪个源<ul>
+<li><code>nrm current</code></li>
+</ul>
+</li>
+<li>切换源：<ul>
+<li><code>nrm use cnpm</code></li>
+</ul>
+</li>
+<li>添加私有npm源，并设置别名为qihoo，网址为自定义<ul>
+<li><code>nrm add qihoo http://registry.npm.360.org</code></li>
+</ul>
+</li>
+<li>测试下速度<ul>
+<li><code>nrm test npm</code>  </li>
+</ul>
+</li>
+<li>删除npm的源配置<ul>
+<li><code>nrm del qihoo</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="创建自己的模块"><a href="#创建自己的模块" class="headerlink" title="创建自己的模块"></a>创建自己的模块</h4><p>这个属于进阶内容，有自己想弄的模块在说吧</p>
+<p>-</p>
+<blockquote>
+<p>本文摘抄自<a href="https://www.runoob.com/nodejs/nodejs-npm.html" target="_blank" rel="noopener">菜鸟教程</a><br><a href="https://www.jianshu.com/p/66f97cadd1eb" target="_blank" rel="noopener">简书四月天__</a></p>
+</blockquote>
+</div>
+
+            
+<nav class="post-nav flex-row">
+  <div class="flex-col waves-block prev">
+    
+      <a href="/2020/05/22/deepin系统踩过的坑/" title="deepin系统踩过的坑" id="post-prev" class="post-nav-link">
+        <i class="icon icon-chevron-left"></i>
+        <span class="article-nav-title">上一篇</span>
+      </a>
+    
+  </div>
+  <div class="flex-col waves-block next">
+    
+      <a href="/2020/05/07/pandas常用实例/" title="pandas使用方法与常用实例" id="post-next" class="post-nav-link">
+        <span class="article-nav-title">下一篇</span>
+        <i class="icon icon-chevron-right"></i>
+      </a>
+    
+  </div>
+
+</nav>
+
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="NPM的使用" data-title="NPM的使用" data-url="http://www.codingevo.com/2020/05/21/NPM的使用/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
+      </div>
+
+    
+
+  </article>
+
+
+
+    </div>
+  </main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-circle-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+<div class="global-share" id="global-share" data-title="NPM的使用" data-pic="/img/logo.png" data-summary="比想要的东西更宝贵的事务，一定会出现在追求的过程当中" data-url="http://www.codingevo.com/2020/05/21/NPM的使用/index.html">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
