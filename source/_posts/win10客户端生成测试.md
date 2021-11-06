@@ -14,3 +14,7 @@ push成功  再测试一下git push -u origin hexo    成功！
 全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了
 
 现在到mac上了
+
+mac上的nodejs 是v12.16.3版本
+windows上的是V16版本
+mac上更新到最新V17版本之后，也不能部署了，又恢复到了V12版本，才可以继续使用
