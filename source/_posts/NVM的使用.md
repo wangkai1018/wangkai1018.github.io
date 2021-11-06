@@ -16,8 +16,8 @@ date: 2020-04-30 17:56:12
 	nvm current：        当前node版本
 	nvm ls：                列出所有已经安装的node版本
 	nvm uninstall          删除已安装的指定版本，语法与install类似
-	nvm alias               给不同的版本号添加别名
-	nvm unalias            删除已定义的别名
+	nvm alias <name> <version>  给不同的版本号添加别名
+	nvm unalias <name>          删除已定义的别名
 	nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包
 	nvm list available    查看可以安装的版本
 	
