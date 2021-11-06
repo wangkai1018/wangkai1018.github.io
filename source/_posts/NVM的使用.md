@@ -20,7 +20,7 @@ date: 2020-04-30 17:56:12
 	nvm unalias <name>          删除已定义的别名
 	nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包
 	nvm list available    查看可以安装的版本
-	
+	nvm install stable    下载、编译、安装、使用当前的稳定版
 	
 	
 **安装**
