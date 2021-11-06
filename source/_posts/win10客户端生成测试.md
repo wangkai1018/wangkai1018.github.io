@@ -18,3 +18,6 @@ push成功  再测试一下git push -u origin hexo    成功！
 mac上的nodejs 是v12.16.3版本
 windows上的是V16版本
 mac上更新到最新V17版本之后，也不能部署了，又恢复到了V12版本，才可以继续使用
+
+Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
+打算把Win10上的nodejs先卸载掉，然后NVM或
