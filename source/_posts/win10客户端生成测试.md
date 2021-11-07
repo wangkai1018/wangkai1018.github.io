@@ -35,8 +35,8 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 时序图
 
 ```sequence
-	participant Client
-	participant Server
+	participant wangkai
+	participant lvmengyao
 
 	Note left of Client:SYN_SENT
 	Client->Server:SYN=1 seq=x
@@ -46,6 +46,7 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 	Client->Server:ACK=y+1
 	Note right of Server:ESTABLISHED
 ```
-
+ 
+如果看卡图就成功了
 
 
