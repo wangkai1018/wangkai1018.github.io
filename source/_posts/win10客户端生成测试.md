@@ -35,6 +35,8 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 
 流程图测试
 
+
+
 ```mermaid
 	    sequenceDiagram
 	    participant 张 as 张三
@@ -53,4 +55,23 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 	    end
 	    李-->>张: 打量着王五...
 	    张->>王: 很好... 王五, 你怎么样?
-```	
+```
+
+时序图
+
+```flow
+
+ st=>start: 开始
+ inputA=>inputoutput: 输入用户名密码
+ opA=>operation: 数据库查询子类
+ conditionA=>condition: 是否有此用户
+ conditionB=>condition: 密码是否正确
+ opB=>operation: 读入用户信息
+ e=>end: 登录
+ st->inputA->opA->conditionA
+ conditionA(yes)->conditionB
+ conditionA(no)->inputA
+ conditionB(yes)->opB->e
+ conditionB(no)->inputA
+```
+

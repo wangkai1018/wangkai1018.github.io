@@ -76,7 +76,7 @@ sequence:
     theme: 
     css_class:
 
-# hexo-filter-sequence流程图插件
+# hexo-filter-flowchart:流程图插件
 flowchart:
   # raphael:   # optional, the source url of raphael.js
   # flowchart: # optional, the source url of flowchart.js
