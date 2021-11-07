@@ -35,18 +35,28 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 时序图
 
 ```sequence
-	participant wangkai
-	participant lvmengyao
+participant wangkai
+participant lvmengyao
 
-	Note left of Client:SYN_SENT
-	Client->Server:SYN=1 seq=x
-	Note right of Server:SYN_RCVD
-	Server->Client:SYN=1 seq=y ACK=x+1
-	Note left of Client:ESTABLISHED
-	Client->Server:ACK=y+1
-	Note right of Server:ESTABLISHED
+Note left of Client:SYN_SENT
+Client->Server:SYN=1 seq=x
+Note right of Server:ddddddd
+Server->Client:SYN=1 seq=y ACK=x+1
+Note left of Client:ESTABLISHED
+Client->Server:ACK=y+1
+Note right of Server:ESTABLISHED
 ```
- 
-如果看卡图就成功了
+第二章
 
+```mermaid
+graph TB
+start(开始)-->inputA[输入用户名密码]
+inputA-->opA{数据库查询子类}
+opA-->conditionA{是否有此用户}
+conditionA--yes-->conditionB{密码是否正确}
+conditionA--no-->inputA
+conditionB--yes-->opB[读入用户信息]
+conditionB--no-->inputA
+opB-->en(登录)
+```
 
