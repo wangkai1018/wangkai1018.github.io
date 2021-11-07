@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.codingevo.com/"/>
-  <updated>2021-11-07T07:08:49.282Z</updated>
+  <updated>2021-11-07T17:21:27.370Z</updated>
   <id>http://www.codingevo.com/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="http://www.codingevo.com/2021/11/07/%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%B5%8B%E8%AF%95/"/>
     <id>http://www.codingevo.com/2021/11/07/流程图测试/</id>
     <published>2021-11-07T07:08:29.000Z</published>
-    <updated>2021-11-07T07:08:49.282Z</updated>
+    <updated>2021-11-07T17:21:27.370Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p><pre><code class="mermaid">sequenceDiagramparticipant 张 as 张三participant 李 as 李四participant 王 as  王五   张 -&gt;&gt; +李: 你好！李四, 最近怎么样?李--&gt;&gt; 王: 你最近怎么样，王五？李--x -张: 我很好，谢谢!activate 王李-x 王: 我很好，谢谢!   Note over 李,王: 李四想了很长时间, 文字太长了&lt;br/&gt;不适合放在一行.deactivate 王loop 李四再想想李--&gt;&gt;王: 我还要想想王--&gt;&gt;李: 想想吧end李--&gt;&gt;张: 打量着王五...张-&gt;&gt;王: 很好... 王五, 你怎么样?</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p><p><div id="flowchart-0" class="flow-chart"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none"> st=>start: 开始 inputA=>inputoutput: 输入用户名密码 opA=>operation: 数据库查询子类 conditionA=>condition: 是否有此用户 conditionB=>condition: 密码是否正确 opB=>operation: 读入用户信息 e=>end: 登录 st->inputA->opA->conditionA conditionA(yes)->conditionB conditionA(no)->inputA conditionB(yes)->opB->e conditionB(no)->inputA</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;h2 id=&quot;概要&quot;&gt;&lt;a href=&quot;#概要&quot; class=&quot;headerlink&quot; title=&quot;概要&quot;&gt;&lt;/a&gt;概要&lt;/h2&gt;&lt;p&gt;在这里填写博客内容&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;mermaid&quot;&gt;sequenceDiagram
-participant 张
+&lt;p&gt;&lt;div id=&quot;flowchart-0&quot; class=&quot;flow-chart&quot;&gt;&lt;/div&gt;&lt;scrip
       
     
     </summary>
