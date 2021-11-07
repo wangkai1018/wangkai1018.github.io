@@ -33,6 +33,8 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 	3. 事实刷新测试
 	
 
+流程图测试
+
 ```mermaid
 	    sequenceDiagram
 	    participant 张 as 张三
