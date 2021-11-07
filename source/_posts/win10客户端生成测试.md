@@ -31,47 +31,33 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 	1. 插件
 	2. 还是馋
 	3. 事实刷新测试
-	
-
-流程图测试
-
-
-
-```mermaid
-	    sequenceDiagram
-	    participant 张 as 张三
-	    participant 李 as 李四
-	    participant 王 as  王五   
-	    张 ->> +李: 你好！李四, 最近怎么样?
-	    李-->> 王: 你最近怎么样，王五？
-	    李--x -张: 我很好，谢谢!
-	    activate 王
-	    李-x 王: 我很好，谢谢!   
-	    Note over 李,王: 李四想了很长时间, 文字太长了<br/>不适合放在一行.
-	    deactivate 王
-	    loop 李四再想想
-	    李-->>王: 我还要想想
-	    王-->>李: 想想吧
-	    end
-	    李-->>张: 打量着王五...
-	    张->>王: 很好... 王五, 你怎么样?
-```
 
 时序图
 
 ```flow
-
- st=>start: 开始
- inputA=>inputoutput: 输入用户名密码
- opA=>operation: 数据库查询子类
- conditionA=>condition: 是否有此用户
- conditionB=>condition: 密码是否正确
- opB=>operation: 读入用户信息
- e=>end: 登录
- st->inputA->opA->conditionA
- conditionA(yes)->conditionB
- conditionA(no)->inputA
- conditionB(yes)->opB->e
- conditionB(no)->inputA
+		 st=>start: 开始
+		 inputA=>inputoutput: 输入用户名密码
+		 opA=>operation: 数据库查询子类
+		 conditionA=>condition: 是否有此用户
+		 conditionB=>condition: 密码是否正确
+		 opB=>operation: 读入用户信息
+		 e=>end: 登录
+		 st->inputA->opA->conditionA
+		 conditionA(yes)->conditionB
+		 conditionA(no)->inputA
+		 conditionB(yes)->opB->e
+		 conditionB(no)->inputA
+```
+```sequence
+		participant Client
+		participant Server
+		
+		Note left of Client:SYN_SENT
+		Client->Server:SYN=1 seq=x
+		Note right of Server:SYN_RCVD
+		Server->Client:SYN=1 seq=y ACK=x+1
+		Note left of Client:ESTABLISHED
+		Client->Server:ACK=y+1
+		Note right of Server:ESTABLISHED
 ```
 
