@@ -8,18 +8,28 @@ date: 2021-11-08 02:11:57
 ## 概要
 在这里填写博客内容
 
-```mermaid
-sequenceDiagram
-participant Client
-participant Server
+
+
+```flow
+st=>start: Start
+op=>operation: 王凯
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+```sequence
+pcipant lvmengyao
 
 Note left of Client:SYN_SENT
 Client->Server:SYN=1 seq=x
-Note right of Server:SYN_RCVD
+Note right of Server:ddddddd
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED
+Note articipant wangkai
+partiright of Server:ESTABLISHED
 ```
-
 

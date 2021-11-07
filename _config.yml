@@ -75,9 +75,15 @@ theme: indigo
     
 # hexo-filter-flowchart:流程图插件
 flowchart:
-  # raphael:   # optional, the source url of raphael.js
-  # flowchart: # optional, the source url of flowchart.js
-  options: # options used for `drawSVG`
+  raphael:   https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js
+  flowchart: https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js
+  options: {
+    "scale": 1,
+    "line-width": 2,
+    "line-length": 50,
+    "text-margin": 10,
+    "font-size": 12
+  }
 
 # hexo-filter-sequence时序图插件  
 sequence:
