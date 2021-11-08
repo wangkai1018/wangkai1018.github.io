@@ -117,6 +117,114 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-mermaid流程图测试2" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2021/11/08/mermaid流程图测试2/">mermaid流程图测试2</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第一个标签/">第一个标签</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第二个标签/">第二个标签</a></li></ul>
+</div>
+        <time datetime="2021-11-07T18:11:57.000Z" itemprop="datePublished" class="post-tiem">
+  2021-11-08
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p>
+<div id="flowchart-0" class="flow-chart"></div><br><div id="sequence-0"></div>
+
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: 王凯
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+participant Server
+
+Note left of Client:SYN_SENT
+Client->Server:SYN=1 seq=x
+Note right of Server:SYN_RCVD
+Server->Client:SYN=1 seq=y ACK=x+1
+Note left of Client:ESTABLISHED
+Client->Server:ACK=y+1
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2021/11/08/mermaid流程图测试2/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
+  <article id="post-流程图测试" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2021/11/07/流程图测试/">流程图测试</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第一个标签/">第一个标签</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第二个标签/">第二个标签</a></li></ul>
+</div>
+        <time datetime="2021-11-07T07:08:29.000Z" itemprop="datePublished" class="post-tiem">
+  2021-11-07
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p>
+<div id="sequence-0"></div>
+
+<p>这里需要注意的是，sequence 这个插件必须在有flow 的页面使用，因为作者漏添加了一行代码的缘故，需要正常使用 sequence 还需要修改插件里面的源码，方法如下<br>打开 node_modules\hexo-filter-sequence\lib\renderer.js 文件 ，在第28行中添加下面一行即可<br><code>//sequence-diagram 1.x 版本依赖 raphael, 2.x版本依赖 snap
+data.content += &#39;&lt;script src=&quot;&#39; + config.raphael + &#39;&quot;&gt;&lt;/script&gt;&#39;;</code><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+participant Server
+
+Note left of Client:SYN_SENT
+Client->Server:SYN=1 seq=x
+Note right of Server:SYN_RCVD
+Server->Client:SYN=1 seq=y ACK=x+1
+Note left of Client:ESTABLISHED
+Client->Server:ACK=y+1
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2021/11/07/流程图测试/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-win10客户端生成测试" class="article article-type-post" itemscope itemprop="blogPost">
     
       
@@ -144,6 +252,34 @@
 <p>用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.<br>push成功  再测试一下git push -u origin hexo    成功！<br>测试push简化操作   git push<br>全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了</p>
 <p>现在到mac上了</p>
 <p>mac上的nodejs 是v12.16.3版本<br>windows上的是V16版本<br>mac上更新到最新V17版本之后，也不能部署了，又恢复到了V12版本，才可以继续使用</p>
+<p>Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理<br>打算把Win10上的nodejs先卸载掉，然后NVM下载mac上对应的nodejs版本</p>
+<p>没想到配置一样后，居然成功了，弄了一周啊。。。。。</p>
+<ul>
+<li><p>士大夫</p>
+</li>
+<li><p>士大夫</p>
+<ul>
+<li>sublime的markdown编辑器使用</li>
+</ul>
+<ol>
+<li>插件</li>
+<li>还是馋</li>
+<li>事实刷新测试</li>
+</ol>
+</li>
+</ul>
+<p>时序图</p>
+<p><div id="sequence-0"></div></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+participant Server
+
+Note left of Client:SYN_SENT
+Client->Server:SYN=1 seq=x
+Note right of Server:SYN_RCVD
+Server->Client:SYN=1 seq=y ACK=x+1
+Note left of Client:ESTABLISHED
+Client->Server:ACK=y+1
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -1324,108 +1460,6 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
       </div>
       <div class="post-footer clearfix">
         <a href="/2020/04/30/NVM的使用/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-视频剪辑工具" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/30/视频剪辑工具/">视频剪辑工具</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/视频剪辑/">视频剪辑</a></li></ul>
-</div>
-        <time datetime="2020-04-30T06:24:58.000Z" itemprop="datePublished" class="post-tiem">
-  2020-04-30
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h2 id="视频剪辑软件工具"><a href="#视频剪辑软件工具" class="headerlink" title="视频剪辑软件工具"></a>视频剪辑软件工具</h2><h3 id="普通区"><a href="#普通区" class="headerlink" title="普通区"></a>普通区</h3><p><strong>喵影工厂</strong>（<strong>Filmora</strong>国内版本):收费,性价比高。属于普通区的非专业</p>
-<h3 id="专业区"><a href="#专业区" class="headerlink" title="专业区"></a>专业区</h3><p><strong>Avid Media Composer</strong>：太过专业，收费太贵。电影电视节目用的比较多</p>
-<p><strong>Final Cut Pro X</strong>和<strong>Final Cut Pro 7</strong>：收费相对前者便宜 。7已被淘</p>
-<p><strong>Premiere（PR）</strong>：国内很多VLOG大咖用的多。<strong>adobe</strong>的，更新快。平时看见也是最多的，在淘宝抖音上的教程 ，看见也是做多的。所以自学比较方便  </p>
-<p><strong>Vegas</strong>和<strong>Edius</strong>：相对于上面几款，这两个操作会简单些，一般小工作室和电台会用。但是没听说过，不知道教程多不多</p>
-<p><strong>DaVinci Resolve 16</strong>：给调色行业带来变革的达芬奇。听到的消息略少</p>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2020/04/30/视频剪辑工具/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-python常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/27/python常用命令/">python常用命令</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-</div>
-        <time datetime="2020-04-27T04:43:58.000Z" itemprop="datePublished" class="post-tiem">
-  2020-04-27
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h2 id="python常用包、工具、命令"><a href="#python常用包、工具、命令" class="headerlink" title="python常用包、工具、命令"></a>python常用包、工具、命令</h2><p><strong>pip</strong>：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">pip</a>是常用的<a href="https://www.python.org/" target="_blank" rel="noopener">python</a>包管理工具，类似于<strong>java</strong>的<strong>maven</strong>。用python的同学，都离不开pip。在Python2.7的安装包中，<strong>easy_install.py</strong>是默认安装的，而pip需要我们手动在终端中进行安装：</p>
-<p><code>sudo easy_install pip</code></p>
-<h3 id="pip的常用命令"><a href="#pip的常用命令" class="headerlink" title="pip的常用命令"></a>pip的常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip --version #查看版本</span><br><span class="line">pip list #已安装包库列表</span><br><span class="line">pip install 包名 #安装指定的包库</span><br><span class="line">pip install --upgrade 库名 #更新指定的包库</span><br><span class="line">pip list --outdated  #查看过期的库(需要更新的库)</span><br><span class="line">pip uninstall 包名 #卸载已安装包</span><br></pre></td></tr></table></figure>
-<h3 id="mac-pip更换豆瓣镜像源"><a href="#mac-pip更换豆瓣镜像源" class="headerlink" title="mac pip更换豆瓣镜像源"></a>mac pip更换豆瓣镜像源</h3><ol>
-<li>在mac终端创建目录<code>md ~/.pip</code></li>
-<li>并在目录中创建文件<code>vim ~/.pip/pip.conf</code></li>
-<li>并在该文件中录入以下内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">  index-url = https://pypi.tuna.tsinghua.edu.cn/simple/</span><br><span class="line">[install]</span><br><span class="line">  trusted-host=pypi.tuna.tsinghua.edu.cn</span><br></pre></td></tr></table></figure>
-<h3 id="windows-pip更换豆瓣镜像源"><a href="#windows-pip更换豆瓣镜像源" class="headerlink" title="windows pip更换豆瓣镜像源"></a>windows pip更换豆瓣镜像源</h3><ol>
-<li>在windows文件管理器中,输入 <code>%APPDATA%</code></li>
-<li>定位到上述目录下，新建<strong>pip</strong>文件夹，然后在该文件中新建一个<strong>pip.ini</strong>文件</li>
-<li>在新建的<strong>pip.ini</strong>文件中录入以下内容：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">timeout = 6000</span><br><span class="line">index-url = http://pypi.douban.com/simple</span><br><span class="line">trusted-host = pypi.douban.com</span><br></pre></td></tr></table></figure>
-<h3 id="终端运行python文件"><a href="#终端运行python文件" class="headerlink" title="终端运行python文件"></a>终端运行python文件</h3><p><code>python test.py arg1 arg2 arg3</code></p>
-<h3 id="conda的使用"><a href="#conda的使用" class="headerlink" title="conda的使用"></a>conda的使用</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">conda --version  #当前使用版本	</span><br><span class="line">conda list  #查看当前环境下已安装的包</span><br><span class="line">conda search 包名  #查找package信息</span><br><span class="line">conda install 包名   #安装库</span><br><span class="line">conda update 包名  #更新单一库</span><br><span class="line">conda update -all   #更新所有的库          </span><br><span class="line">conda update conda #更新conda</span><br></pre></td></tr></table></figure>
-<h3 id="python的路径"><a href="#python的路径" class="headerlink" title="python的路径"></a>python的路径</h3><p>Mac下的python的各种路径：</p>
-<ul>
-<li>自带路径：mac自带的版本为2.7。路径为:/System/Library/Frameworks/Python.framework/Version</li>
-<li>brew安装路径：HomeBrew安装python路径为/usr/local/Cellar/python里边存放了HomeBrew所安装版本。</li>
-</ul>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2020/04/27/python常用命令/" class="post-more waves-button-light">MORE</a>
       </div>
     
 
