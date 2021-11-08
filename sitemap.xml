@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.codingevo.com/2021/11/07/%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2021-11-08T15:11:12.773Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2021/11/05/win10%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%94%9F%E6%88%90%E6%B5%8B%E8%AF%95/</loc>
+    
+    <lastmod>2021-11-08T15:00:21.721Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.codingevo.com/2021/11/08/mermaid%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%B5%8B%E8%AF%952/</loc>
     
     <lastmod>2021-11-07T19:28:57.414Z</lastmod>
@@ -9,28 +23,14 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2021/11/07/%E6%B5%81%E7%A8%8B%E5%9B%BE%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2021-11-07T19:27:29.469Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.codingevo.com/2021/11/05/win10%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%94%9F%E6%88%90%E6%B5%8B%E8%AF%95/</loc>
-    
-    <lastmod>2021-11-07T19:24:50.727Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.codingevo.com/2020/04/30/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B7%A5%E5%85%B7/</loc>
+    <loc>http://www.codingevo.com/2016/08/03/%E8%B6%8B%E5%8A%BF%E7%BA%BF%E7%94%BB%E6%B3%95/</loc>
     
     <lastmod>2021-11-06T16:06:44.110Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2016/08/03/%E8%B6%8B%E5%8A%BF%E7%BA%BF%E7%94%BB%E6%B3%95/</loc>
+    <loc>http://www.codingevo.com/2020/04/30/%E8%A7%86%E9%A2%91%E5%89%AA%E8%BE%91%E5%B7%A5%E5%85%B7/</loc>
     
     <lastmod>2021-11-06T16:06:44.110Z</lastmod>
     
@@ -65,14 +65,14 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://www.codingevo.com/2020/04/17/mac%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E6%8F%8F%E8%BF%B0/</loc>
     
     <lastmod>2021-11-06T16:06:44.108Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2020/04/17/mac%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E6%8F%8F%E8%BF%B0/</loc>
+    <loc>http://www.codingevo.com/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2021-11-06T16:06:44.108Z</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2020/05/22/deepin%E7%B3%BB%E7%BB%9F%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
+    <loc>http://www.codingevo.com/2015/09/08/android%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%9E%B6%E6%9E%84/</loc>
     
     <lastmod>2021-11-06T16:06:44.107Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/09/08/android%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7%E4%B8%8E%E5%B9%B3%E5%8F%B0%E6%9E%B6%E6%9E%84/</loc>
+    <loc>http://www.codingevo.com/2020/05/22/deepin%E7%B3%BB%E7%BB%9F%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/</loc>
     
     <lastmod>2021-11-06T16:06:44.107Z</lastmod>
     
@@ -135,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2020/05/21/NPM%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2021-11-06T16:06:44.106Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.codingevo.com/2018/02/14/MacDown%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</loc>
     
     <lastmod>2021-11-06T16:06:44.106Z</lastmod>
@@ -149,14 +142,21 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/09/AndroidStudio%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6/</loc>
+    <loc>http://www.codingevo.com/2020/05/21/NPM%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2021-11-06T16:06:44.106Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2021-11-06T16:06:44.105Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://www.codingevo.com/2015/06/09/AndroidStudio%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6/</loc>
     
     <lastmod>2021-11-06T16:06:44.105Z</lastmod>
     

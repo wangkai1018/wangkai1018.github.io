@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Coding Evo">
 <meta property="og:description" content="概要用于测试多终端同步 用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.push成功  再测试一下git push -u origin hexo    成功！测试push简化操作   git push全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了 现在到mac上了 mac上的nodejs 是v12.16.3版">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-11-07T19:24:50.727Z">
+<meta property="og:updated_time" content="2021-11-08T15:00:21.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10客户端生成测试">
 <meta name="twitter:description" content="概要用于测试多终端同步 用win10系统上传的，在mac上done下来的，现在编辑后，在push一下，看看效果.push成功  再测试一下git push -u origin hexo    成功！测试push简化操作   git push全部提交到了远程仓库中，而且win10终端也已经把代码done了下来，接下来要再进行push 了 现在到mac上了 mac上的nodejs 是v12.16.3版">
@@ -196,16 +196,17 @@
 </li>
 </ul>
 <p>时序图</p>
-<p><div id="sequence-0"></div><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">pcipant lvmengyao
+<p><div id="sequence-0"></div></p>
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+participant Server
 
 Note left of Client:SYN_SENT
 Client->Server:SYN=1 seq=x
-Note right of Server:ddddddd
+Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note articipant wangkai
-partiright of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 </div>
 
             
