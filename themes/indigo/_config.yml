@@ -31,6 +31,9 @@ avatar: /img/logo.png
 # email
 email: karlwk@codingevo.com
 
+# color
+color: '#66CCCC'
+
 # Content
 tags:
   title: 标签
