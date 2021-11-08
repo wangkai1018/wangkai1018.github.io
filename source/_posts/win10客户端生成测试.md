@@ -35,14 +35,14 @@ Win10上的nodejs是自助安装的，并没有使用NVM等工具进行管理
 时序图
 
 ```sequence
-pcipant lvmengyao
+participant Client
+participant Server
 
 Note left of Client:SYN_SENT
 Client->Server:SYN=1 seq=x
-Note right of Server:ddddddd
+Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note articipant wangkai
-partiright of Server:ESTABLISHED
+Note right of Server:ESTABLISHED
 ```
