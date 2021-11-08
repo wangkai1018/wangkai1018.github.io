@@ -117,6 +117,74 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-NVM的使用" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/04/30/NVM的使用/">NVM的使用</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+        <time datetime="2020-04-30T09:56:12.000Z" itemprop="datePublished" class="post-tiem">
+  2020-04-30
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h2><p><strong>NodeJS</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p>
+<pre><code>nvm ls-remote：     列出所有可以安装的node版本号
+nvm install v10.4.0：安装指定版本号的node
+nvm use v10.3.0：   切换node的版本，这个是全局的
+nvm current：        当前node版本
+nvm ls：                列出所有已经安装的node版本
+nvm uninstall          删除已安装的指定版本，语法与install类似
+nvm alias &lt;name&gt; &lt;version&gt;  给不同的版本号添加别名
+nvm unalias &lt;name&gt;          删除已定义的别名
+nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包
+nvm list available    查看可以安装的版本
+nvm install stable    下载、编译、安装、使用当前的稳定版
+</code></pre><p><strong>安装</strong></p>
+<ul>
+<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
+<li>或者用homebrew 直接搜索nvm，进行安装</li>
+</ul>
+<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p>
+<p><strong>国内源镜像</strong></p>
+<p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p>
+<ol>
+<li>在终端中打开<code>vim ~/.zshrc</code></li>
+<li>在配置文件中增加<code>export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</code></li>
+<li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li>
+<li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li>
+</ol>
+<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
+<p>-</p>
+<blockquote>
+<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
+</blockquote>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2020/04/30/NVM的使用/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-视频剪辑工具" class="article article-type-post" itemscope itemprop="blogPost">
     
       
@@ -338,7 +406,7 @@ Header 2
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#114;&#97;&#x6e;&#x75;&#x73;&#x6a;&#x72;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;" target="_blank" rel="noopener">&#x75;&#114;&#97;&#x6e;&#x75;&#x73;&#x6a;&#x72;&#64;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#114;&#97;&#110;&#x75;&#115;&#x6a;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;" target="_blank" rel="noopener">&#x75;&#114;&#97;&#110;&#x75;&#115;&#x6a;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#99;&#x6f;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
 <p>Same thing with urls: <a href="http://macdown.uranusjr.com" target="_blank" rel="noopener">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
 <p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
 <h4 id="Reference-style"><a href="#Reference-style" class="headerlink" title="Reference style"></a>Reference style</h4><p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
@@ -732,52 +800,6 @@ reset adb 重启
       </div>
       <div class="post-footer clearfix">
         <a href="/2015/09/06/android-ADB-常用命令/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-git的使用" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/06/26/git的使用/">git和svn的区别</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-</div>
-        <time datetime="2015-06-26T13:32:06.000Z" itemprop="datePublished" class="post-tiem">
-  2015-06-26
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>git是一个开源的<strong>分布式</strong>版本控制系统，与常用的<strong>SVN</strong>,<strong>CVS</strong>等不同。因为采取了分布式版本库的方式，不需要服务器软件的支持。</p>
-<p>git他不仅仅是个版本控制系统，还是个内容管理系统<strong>CMS</strong>.</p>
-<h2 id="Git和SVN区别："><a href="#Git和SVN区别：" class="headerlink" title="Git和SVN区别："></a>Git和SVN区别：</h2><ol>
-<li>git是分布式的，svn和cvs不是，这个是最核心的区别</li>
-<li>git把内容元数据方式存储，而SVN是按文件：把所有的版本控制系统都是把元文件信息隐藏在svn,cvs等文件中</li>
-<li>git分支和svn的分支不同：分支在svn中一点都不特别，就是版本中的另外一个目录</li>
-<li>git没有一个全局的版本号，而svn有：目前为止这是svn相比git缺少的最大的一个特征</li>
-<li>git的内容完整性要优于svn，git的内容存储使用的是<strong>SHA-1</strong>哈希算法，这样能确保代码内容的完整性，确保在遇到磁盘和网络问题时减低对版本库的破坏</li>
-</ol>
-<h2 id="在git-log-–oneline-命令进入log页面后，按q退出当前页面"><a href="#在git-log-–oneline-命令进入log页面后，按q退出当前页面" class="headerlink" title="在git log –oneline 命令进入log页面后，按q退出当前页面"></a>在git log –oneline 命令进入log页面后，按q退出当前页面</h2>
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2015/06/26/git的使用/" class="post-more waves-button-light">MORE</a>
       </div>
     
 

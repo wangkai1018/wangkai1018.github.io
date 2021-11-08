@@ -117,6 +117,44 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-流程图应用备注" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2021/11/09/流程图应用备注/">流程图应用备注</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第一个标签/">第一个标签</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/第二个标签/">第二个标签</a></li></ul>
+</div>
+        <time datetime="2021-11-08T17:46:21.000Z" itemprop="datePublished" class="post-tiem">
+  2021-11-09
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//sequence-diagram 1.x 版本依赖 raphael, 2.x版本依赖 snap</span><br><span class="line">data.content += &apos;&lt;script src=&quot;&apos; + config.raphael + &apos;&quot;&gt;&lt;/script&gt;&apos;;</span><br></pre></td></tr></table></figure></p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2021/11/09/流程图应用备注/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-mermaid流程图测试2" class="article article-type-post" itemscope itemprop="blogPost">
     
       
@@ -143,7 +181,14 @@
           <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p>
 <div id="flowchart-0" class="flow-chart"></div><br><div id="sequence-0"></div>
 
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: 王凯
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
 participant Server
 
 Note left of Client:SYN_SENT
@@ -152,14 +197,7 @@ Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
-op=>operation: 王凯
-cond=>condition: Yes or No?
-e=>end
-
-st->op->cond
-cond(yes)->e
-cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -198,8 +236,7 @@ cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">
       <div class="post-content" itemprop="postContent" >
         
           <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p>
-<p>这里需要注意的是，sequence 这个插件必须在有flow 的页面使用，因为作者漏添加了一行代码的缘故，需要正常使用 sequence 还需要修改插件里面的源码，方法如下<br>打开 node_modules\hexo-filter-sequence\lib\renderer.js 文件 ，在第28行中添加下面一行即可    </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//sequence-diagram 1.x 版本依赖 raphael, 2.x版本依赖 snap</span><br><span class="line">data.content += &apos;&lt;script src=&quot;&apos; + config.raphael + &apos;&quot;&gt;&lt;/script&gt;&apos;;</span><br></pre></td></tr></table></figure>
+<p>这里需要注意的是，sequence 这个插件必须在有flow 的页面使用，因为作者漏添加了一行代码的缘故，需要正常使用 sequence 还需要修改插件里面的源码，方法如下<br>打开 node_modules\hexo-filter-sequence\lib\renderer.js 文件 ，在第28行中添加下面一行即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//sequence-diagram 1.x 版本依赖 raphael, 2.x版本依赖 snap</span><br><span class="line">data.content += ‘&lt;script src=“’ + config.raphael + ’”&gt;&lt;/script&gt;‘;</span><br><span class="line">由于转义字符的原因，上述中的单引号和双引号要修改成英文状态</span><br></pre></td></tr></table></figure></p>
 <p>经测试可用</p>
 <div id="sequence-0"></div>
 
@@ -281,7 +318,7 @@ Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -1394,74 +1431,6 @@ df2.describe()
       </div>
       <div class="post-footer clearfix">
         <a href="/2020/05/07/python的pandas基础/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-NVM的使用" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2020/04/30/NVM的使用/">NVM的使用</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NVM/">NVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NodeJS/">NodeJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-</div>
-        <time datetime="2020-04-30T09:56:12.000Z" itemprop="datePublished" class="post-tiem">
-  2020-04-30
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h2 id="NVM的使用"><a href="#NVM的使用" class="headerlink" title="NVM的使用"></a>NVM的使用</h2><p><strong>NodeJS</strong>的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac：</p>
-<pre><code>nvm ls-remote：     列出所有可以安装的node版本号
-nvm install v10.4.0：安装指定版本号的node
-nvm use v10.3.0：   切换node的版本，这个是全局的
-nvm current：        当前node版本
-nvm ls：                列出所有已经安装的node版本
-nvm uninstall          删除已安装的指定版本，语法与install类似
-nvm alias &lt;name&gt; &lt;version&gt;  给不同的版本号添加别名
-nvm unalias &lt;name&gt;          删除已定义的别名
-nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包
-nvm list available    查看可以安装的版本
-nvm install stable    下载、编译、安装、使用当前的稳定版
-</code></pre><p><strong>安装</strong></p>
-<ul>
-<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
-<li>或者用homebrew 直接搜索nvm，进行安装</li>
-</ul>
-<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p>
-<p><strong>国内源镜像</strong></p>
-<p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p>
-<ol>
-<li>在终端中打开<code>vim ~/.zshrc</code></li>
-<li>在配置文件中增加<code>export NVM_NODEJS_ORG_MIRROR=http://npm.taobao.org/mirrors/node</code></li>
-<li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li>
-<li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li>
-</ol>
-<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
-<p>-</p>
-<blockquote>
-<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
-</blockquote>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2020/04/30/NVM的使用/" class="post-more waves-button-light">MORE</a>
       </div>
     
 
