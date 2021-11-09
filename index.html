@@ -563,9 +563,15 @@ Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" sty
 </ul>
 </li>
 <li>规则冲突：俗话说“无规矩不成方圆”，有些事情一旦违背了规则就会引发冲突</li>
-<li>理性与感性的冲突：感性冲突指在一件事情当中感性思维明显战胜理性思维而引发的。反之则是理性冲突。        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">op1=>operation: 王凯
-op2=>operation: 吕梦瑶
-op1->op2</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">op1=>operation: 王闵京
+<li>理性与感性的冲突：感性冲突指在一件事情当中感性思维明显战胜理性思维而引发的。反之则是理性冲突。        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">cond=>condition: 核心目的：持续为平台供给大量的优质内容
+op1=>operation: 适用于：滴滴的司机端运营，美团外卖的骑手端运营，京东物流的快递员运营
+op2=>operation: 分类分层的运营策略
+op3=>operation: 二八原则，大部分资源倾斜给头部生产者
+
+
+cond->op2->op3
+cond(yes,right)->op1
+cond(no)->op2</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">op1=>operation: 王闵京
 op2=>operation: 驴猛邀
 op1->op2</textarea><textarea id="flowchart-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script></li>
 </ul>
