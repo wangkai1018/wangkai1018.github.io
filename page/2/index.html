@@ -117,6 +117,151 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-python的pandas基础" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/python的pandas基础/">python的pandas基础</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+        <time datetime="2020-05-07T00:48:49.000Z" itemprop="datePublished" class="post-tiem">
+  2020-05-07
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="python的pandas基础"><a href="#python的pandas基础" class="headerlink" title="python的pandas基础"></a>python的pandas基础</h2><p>江湖上流传着这么一句话——分析不识潘大师（PANDAS），纵是老手也枉然。Pandas是基于Numpy的专业数据分析工具，可以灵活高效的处理各种数据集，也是我们后期分析案例的神器。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>pandas提供了两种数据结构，分别是<strong>DataFrame</strong>和<strong>Series</strong>。所有的pandas的骚操作都是基于于此。</p>
+<ul>
+<li>DataFrame：可以简单的理解为Excel中的表格    </li>
+<li>Series：Series可以理解为表中的一列</li>
+</ul>
+<h3 id="表格的创建"><a href="#表格的创建" class="headerlink" title="表格的创建"></a>表格的创建</h3><p>构造DataFrame最简单的方式是字典+列表，也就是python的<strong>Dictionary</strong>+<strong>List</strong>。Dictionary是键值对集合数据类型，理解为存储表格中的列的数据；列名为<strong>key</strong>,<strong>value</strong>为该列的所有数据值；其中的value的数据类型就是<strong>List</strong>，存储该列值的具体明细。表格的创建既有列，还有横行，即<strong>index</strong>。熟悉这个之后，对于Excel的创建就有了一个初步的了解。如下：</p>
+<pre><code>import pandas as pd 
+df1=pd.DataFrame({&apos;工资&apos;:[9000,7000,4000,8000,100000],&apos;绩效&apos;:[86,91,74,83,97],&apos;性别&apos;:[&apos;男&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;]},index=[&apos;王闵京&apos;,&apos;陈红英&apos;,&apos;张秀影&apos;,&apos;王春芳&apos;,&apos;陈春月&apos;])
+print(df1)
+</code></pre><p>运行后会出现以下表格：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center">工资</th>
+<th style="text-align:right">绩效</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:center">9000</td>
+<td style="text-align:right">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:center">7000</td>
+<td style="text-align:right">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:center">4000</td>
+<td style="text-align:right">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:center">8000</td>
+<td style="text-align:right">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:center">100000</td>
+<td style="text-align:right">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<p>其中工资、绩效、性别一栏为columns(列)；第一列的名字为index;中间的值为values</p>
+<h3 id="Excel和Csv文件的读取"><a href="#Excel和Csv文件的读取" class="headerlink" title="Excel和Csv文件的读取"></a>Excel和Csv文件的读取</h3><pre><code>#csv文件的读取.
+#engine是使用的分析引擎，读取csv文件一般指定python避免中文和编码造成的报错
+df2=pd.read_csv(&apos;测试文件.csv&apos;,engine=&apos;python&apos;)
+df2.head()
+#xls和xlsx文件的读取
+df3=pd.read_excel(&apos;测试文件.xls&apos;)
+df3.head()
+</code></pre><h3 id="文件的保存"><a href="#文件的保存" class="headerlink" title="文件的保存"></a>文件的保存</h3><pre><code>df2.to_csv(&apos;要保存的名字.csv&apos;)
+df3.to_excel(&apos;要保存的名字.xlsx&apos;)
+</code></pre><h3 id="认识数据"><a href="#认识数据" class="headerlink" title="认识数据"></a>认识数据</h3><pre><code>#查看默认前5行数据
+df2.head()
+#查看默认末尾5行数据
+df2.tail()
+#查看指定行数数据
+df2.head(10)
+#查看个列数据的类型
+df2.info()
+#快速查看数据类型的关键统计指标；像平均数、中位数、标准差等等
+#该方法只针对数值类型的值，其中count指的是统计每一列中有多少空值
+df2.describe()
+</code></pre><h3 id="获取数据的行数和列数"><a href="#获取数据的行数和列数" class="headerlink" title="获取数据的行数和列数"></a>获取数据的行数和列数</h3><pre><code># 获取行数
+ df2.shape[0] 
+ # 获取行数
+ len(df2)
+ # 获取列数
+ df2.shape[1] 
+</code></pre><h3 id="数据的增删改查"><a href="#数据的增删改查" class="headerlink" title="数据的增删改查"></a>数据的增删改查</h3><ul>
+<li>增</li>
+<li>删</li>
+<li>改</li>
+<li>查(选)</li>
+</ul>
+<p><strong>增</strong>：</p>
+<p>增加一列，用df[‘新列名’] = 新列值的形式，在原数据基础上赋值即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2[&apos;新增的列名&apos;]=rang(1,len(df2)+1)</span><br></pre></td></tr></table></figure>
+<p><strong>删</strong>：</p>
+<p>axis = 1表示针对列的操作，inplace为True，则直接在源数据上进行修改，否则源数据会保持原样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">df2.drop(&apos;删除的列&apos;,axis=1,inplace=True)</span><br></pre></td></tr></table></figure>
+<p><strong>改</strong>：</p>
+<p>df2[‘旧列名’] =  某个值或者某列值，就完成了对原列数值的修改</p>
+<p><strong>查(选)</strong>：</p>
+<p>选取某一列：df2[‘列名’]即可</p>
+<h3 id="Excel文件的数据遍历"><a href="#Excel文件的数据遍历" class="headerlink" title="Excel文件的数据遍历"></a>Excel文件的数据遍历</h3><p>Pandas是python的数据分析包，提供了大量的快速便捷处理数据的函数和方法，其中遍历的方法有一下几种，处理效率从慢到快：</p>
+<ol>
+<li>for in循环迭代方式</li>
+<li>iterrows()生成器方式</li>
+<li>apply()方法循环方式</li>
+<li>Pandas series的矢量化方式</li>
+<li>Numpy arrays的矢量化方式</li>
+</ol>
+<p>总结</p>
+<p>使用timeit方法对以上几种遍历方式进行执行时间测试，测试结果如下。可以看出循环执行的速度是最慢的，iterrows()针对Pandas的dataframe进行了优化，相比直接循环有显著提升。apply()方法也是在行之间进行循环，但由于利用了类似Cython的迭代器的一系列全局优化，其效率要比iterrows高很多。NumPy arrays的矢量化运行速度最快，其次是Pandas series矢量化。由于矢量化是同时作用于整个序列的，可以节省更多的时间，相比使用标量操作更好，NumPy使用预编译的C代码在底层进行优化，同时也避免了Pandas series操作过程中的很多开销，例如索引、数据类型等等，因此，NumPy arrays的操作要比Pandas series快得多。</p>
+<hr>
+<p>本文笔记摘抄自<a href="https://mp.weixin.qq.com/s?__biz=MzU5Mjg2OTQ1MA==&amp;mid=2247484097&amp;idx=1&amp;sn=ad8fabbd84bf67655996026fc0ac5688&amp;chksm=fe1863e4c96feaf200e9398bb7c824e99d3fc01ec965666497ce584466dc93f83dd5d127a46d&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">知乎吹牛Z</a><br><a href="https://blog.csdn.net/wem603947175/article/details/84311873" target="_blank" rel="noopener">CSDN「西山枫叶」</a></p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2020/05/07/python的pandas基础/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-NVM的使用" class="article article-type-post" itemscope itemprop="blogPost">
     
       
@@ -406,7 +551,7 @@ Header 2
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#114;&#97;&#x6e;&#x75;&#115;&#x6a;&#114;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x75;&#114;&#97;&#x6e;&#x75;&#115;&#x6a;&#114;&#x40;&#x67;&#x6d;&#97;&#105;&#108;&#46;&#99;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#114;&#97;&#110;&#117;&#x73;&#x6a;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;" target="_blank" rel="noopener">&#x75;&#114;&#97;&#110;&#117;&#x73;&#x6a;&#114;&#64;&#x67;&#109;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
 <p>Same thing with urls: <a href="http://macdown.uranusjr.com" target="_blank" rel="noopener">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
 <p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
 <h4 id="Reference-style"><a href="#Reference-style" class="headerlink" title="Reference style"></a>Reference style</h4><p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
@@ -749,57 +894,6 @@ Header 2
       </div>
       <div class="post-footer clearfix">
         <a href="/2015/09/08/android系统特性与平台架构/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-android-ADB-常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/06/android-ADB-常用命令/">android ADB 常用命令</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADB/">ADB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-</div>
-        <time datetime="2015-09-06T07:27:01.000Z" itemprop="datePublished" class="post-tiem">
-  2015-09-06
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><pre><code>adb install [-r] [-s]  xxxx.apk 安装软件
-app：adb unstall [-k] &lt;包名&gt; -k 卸载app
-adb pull xxxx.xxxx 取出手机中的文件
-adb push xxx.xxx 发送文件到手机当中
-adb shell  进入手机终端
-adb devices     杀死adb
-adb start-server   启动adb
-reset adb 重启
-</code></pre><p> FAQ</p>
-<ul>
-<li>App的包名是App的唯一标识！！！</li>
-<li>安装软件中的  -r  重新安装</li>
-<li>-s   安装到SDK</li>
-</ul>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2015/09/06/android-ADB-常用命令/" class="post-more waves-button-light">MORE</a>
       </div>
     
 
