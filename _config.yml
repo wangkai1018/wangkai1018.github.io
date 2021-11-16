@@ -66,12 +66,11 @@ pagination_dir: page
 theme: indigo
   
 # mermaid chart 以后再试试
-mermaid: ## mermaid url https://github.com/knsv/mermaid 
-  enable: true  # default true 
-  version: "7.1.2" # default v7.1.2 
-  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js 
-    #startOnload: true  // default true 
-  theme: forest
+mermaid: ## mermaid url https://github.com/knsv/mermaid
+  enable: true  # default true
+  version: "7.1.2" # default v7.1.2
+  options:  # find more api options from https://github.com/knsv/mermaid/blob/master/src/mermaidAPI.js
+  #startOnload: true  // default true
     
 # hexo-filter-flowchart:流程图插件
 flowchart:
