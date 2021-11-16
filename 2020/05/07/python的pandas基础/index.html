@@ -282,7 +282,7 @@ df2.describe()
 <p>总结</p>
 <p>使用timeit方法对以上几种遍历方式进行执行时间测试，测试结果如下。可以看出循环执行的速度是最慢的，iterrows()针对Pandas的dataframe进行了优化，相比直接循环有显著提升。apply()方法也是在行之间进行循环，但由于利用了类似Cython的迭代器的一系列全局优化，其效率要比iterrows高很多。NumPy arrays的矢量化运行速度最快，其次是Pandas series矢量化。由于矢量化是同时作用于整个序列的，可以节省更多的时间，相比使用标量操作更好，NumPy使用预编译的C代码在底层进行优化，同时也避免了Pandas series操作过程中的很多开销，例如索引、数据类型等等，因此，NumPy arrays的操作要比Pandas series快得多。</p>
 <hr>
-<p>本文笔记摘抄自<a href="https://mp.weixin.qq.com/s?__biz=MzU5Mjg2OTQ1MA==&amp;mid=2247484097&amp;idx=1&amp;sn=ad8fabbd84bf67655996026fc0ac5688&amp;chksm=fe1863e4c96feaf200e9398bb7c824e99d3fc01ec965666497ce584466dc93f83dd5d127a46d&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">知乎吹牛Z</a><br><a href="https://blog.csdn.net/wem603947175/article/details/84311873" target="_blank" rel="noopener">CSDN「西山枫叶」</a></p>
+<p>本文笔记摘抄自<a href="https://mp.weixin.qq.com/s?__biz=MzU5Mjg2OTQ1MA==&amp;mid=2247484097&amp;idx=1&amp;sn=ad8fabbd84bf67655996026fc0ac5688&amp;chksm=fe1863e4c96feaf200e9398bb7c824e99d3fc01ec965666497ce584466dc93f83dd5d127a46d&amp;scene=21#wechat_redirect">知乎吹牛Z</a><br><a href="https://blog.csdn.net/wem603947175/article/details/84311873">CSDN「西山枫叶」</a></p>
 </div>
 
             
@@ -384,6 +384,14 @@ df2.describe()
     </ul>
  </div>
 
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 

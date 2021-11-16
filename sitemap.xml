@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.codingevo.com/2021/11/13/%E5%86%85%E5%AE%B9%E8%BF%90%E8%90%A52/</loc>
+    
+    <lastmod>2021-11-16T17:11:05.412Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.codingevo.com/2021/11/13/%E5%86%85%E5%AE%B9%E8%BF%90%E8%90%A5%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86/</loc>
     
     <lastmod>2021-11-13T09:38:04.416Z</lastmod>
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2020/05/07/python%E7%9A%84pandas%E5%9F%BA%E7%A1%80/</loc>
-    
-    <lastmod>2021-11-06T16:06:44.109Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.codingevo.com/2015/03/11/vim%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     
     <lastmod>2021-11-06T16:06:44.109Z</lastmod>
@@ -79,14 +79,21 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2020/04/17/mac%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E6%8F%8F%E8%BF%B0/</loc>
+    <loc>http://www.codingevo.com/2020/05/07/python%E7%9A%84pandas%E5%9F%BA%E7%A1%80/</loc>
+    
+    <lastmod>2021-11-06T16:06:44.109Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2021-11-06T16:06:44.108Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/26/git%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
+    <loc>http://www.codingevo.com/2020/04/17/mac%E7%BB%88%E7%AB%AF%E5%B7%A5%E5%85%B7%E6%8F%8F%E8%BF%B0/</loc>
     
     <lastmod>2021-11-06T16:06:44.108Z</lastmod>
     
@@ -149,13 +156,6 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2018/02/14/MacDown%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</loc>
-    
-    <lastmod>2021-11-06T16:06:44.106Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.codingevo.com/2020/05/21/NPM%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2021-11-06T16:06:44.106Z</lastmod>
@@ -163,9 +163,9 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
+    <loc>http://www.codingevo.com/2018/02/14/MacDown%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</loc>
     
-    <lastmod>2021-11-06T16:06:44.105Z</lastmod>
+    <lastmod>2021-11-06T16:06:44.106Z</lastmod>
     
   </url>
   
@@ -177,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://www.codingevo.com/2015/10/16/Android%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80%E5%92%8C%E9%80%82%E9%85%8D/</loc>
+    <loc>http://www.codingevo.com/2015/06/13/AndroidStudio%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2021-11-06T16:06:44.105Z</lastmod>
     
@@ -185,6 +185,13 @@
   
   <url>
     <loc>http://www.codingevo.com/2015/06/08/AndroidStudio%E7%9A%84%E8%B5%84%E6%BA%90%E7%9B%AE%E5%BD%95%E5%8F%8A%E8%AF%B4%E6%98%8E/</loc>
+    
+    <lastmod>2021-11-06T16:06:44.105Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.codingevo.com/2015/10/16/Android%E4%B8%AD%E7%9A%84%E5%B8%83%E5%B1%80%E5%92%8C%E9%80%82%E9%85%8D/</loc>
     
     <lastmod>2021-11-06T16:06:44.105Z</lastmod>
     
