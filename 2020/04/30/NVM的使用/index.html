@@ -6,9 +6,9 @@
   <title>NVM的使用 | Coding Evo | karlwk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="笔记,NodeJS,NVM">
+  <meta name="keywords" content="NodeJS,笔记,NVM">
   <meta name="description" content="NVM的使用NodeJS的多版本管理系统,可以同一个机器上安装多个版本的环境，可以随时进行切换。版本管理mac还可以选择n；但是不支持windows。以下操作基于Mac： nvm ls-remote：     列出所有可以安装的node版本号 nvm install v10.4.0：安装指定版本号的node nvm use v10.3.0：   切换node的版本，这个是全局的 nvm curre">
-<meta name="keywords" content="笔记,NodeJS,NVM">
+<meta name="keywords" content="NodeJS,笔记,NVM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NVM的使用">
 <meta property="og:url" content="http://www.codingevo.com/2020/04/30/NVM的使用/index.html">
@@ -189,10 +189,10 @@ nvm list available    查看可以安装的版本
 nvm install stable    下载、编译、安装、使用当前的稳定版
 </code></pre><p><strong>安装</strong></p>
 <ul>
-<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
+<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
 <li>或者用homebrew 直接搜索nvm，进行安装</li>
 </ul>
-<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p>
+<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea">简书Wo信你个鬼</a></p>
 <p><strong>国内源镜像</strong></p>
 <p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p>
 <ol>
@@ -201,10 +201,10 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
 <li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li>
 <li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li>
 </ol>
-<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
+<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
 <p>-</p>
 <blockquote>
-<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
+<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7">简书omicron</a></p>
 </blockquote>
 </div>
 
@@ -307,6 +307,14 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
     </ul>
  </div>
 
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 

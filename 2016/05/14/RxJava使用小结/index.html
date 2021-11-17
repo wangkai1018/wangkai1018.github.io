@@ -184,7 +184,7 @@
 <blockquote>
 <p>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</p>
 </blockquote>
-<p>这是在<a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a>在github主页上的介绍</p>
+<p>这是在<a href="https://github.com/ReactiveX/RxJava">RxJava</a>在github主页上的介绍</p>
 <h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><p><code>RxJava</code>的异步实现，是通过扩展的观察者模式实现的。android中比较典型的例子：点击监听器<code>OnClickListener</code>。<code>View</code>是被观察者，<code>OnClickListener</code>是观察者，两者通过<code>setOnClickListener</code>产生关系，<code>Android Framework</code>层会将点击事件发送给注册过的OnClickListener。</p>
 <p>RxJava的四大基本概念</p>
 <ul>
@@ -294,6 +294,14 @@
     </ul>
  </div>
 
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 

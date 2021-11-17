@@ -117,6 +117,494 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-pandas常用实例" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/pandas常用实例/">pandas使用方法与常用实例</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pandas/">pandas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+        <time datetime="2020-05-07T06:20:04.000Z" itemprop="datePublished" class="post-tiem">
+  2020-05-07
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="pandas使用方法与常用实例"><a href="#pandas使用方法与常用实例" class="headerlink" title="pandas使用方法与常用实例"></a>pandas使用方法与常用实例</h2><h3 id="代码创建表格并输出成文件"><a href="#代码创建表格并输出成文件" class="headerlink" title="代码创建表格并输出成文件"></a>代码创建表格并输出成文件</h3><p><strong>方法一</strong>：</p>
+<p>有的功能基于openpyxl模块，如果没有需要用pip安装</p>
+<pre><code>import pandas as pd
+df1=pd.DataFrame({&apos;工资&apos;:[9000,7000,4000,8000,100000],&apos;绩效分&apos;:[86,91,74,83,97],&apos;性别&apos;:[&apos;男&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;]},index=[&apos;~王闵京&apos;,&apos;~陈红英&apos;,&apos;~张秀影&apos;,&apos;~王春芳&apos;,&apos;~陈春月&apos;])
+print(df1)
+#将数据保存成表格文件
+writer=pd.ExcelWriter(&apos;my2.xlsx&apos;) 
+df1.to_excel(writer,float_format=&apos;%.5f&apos;)
+writer.save()
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">9000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">~男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">7000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">4000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">8000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">~女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">~女</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法二</strong>：</p>
+<p>此方法需要导入numpy、openpyxl模块</p>
+<pre><code>import pandas as pd
+import numpy as np
+data = np.arange(1,101).reshape((10,10))
+data_df = pd.DataFrame(data)
+data_df.columns = [&apos;A&apos;,&apos;B&apos;,&apos;C&apos;,&apos;D&apos;,&apos;E&apos;,&apos;F&apos;,&apos;G&apos;,&apos;H&apos;,&apos;I&apos;,&apos;J&apos;]
+data_df.index = [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;,&apos;d&apos;,&apos;e&apos;,&apos;f&apos;,&apos;g&apos;,&apos;h&apos;,&apos;i&apos;,&apos;j&apos;]
+priint(data_df)
+writer = pd.ExcelWriter(&apos;my.xlsx&apos;)
+data_df.to_excel(writer,float_format=&apos;%.5f&apos;)
+writer.save()
+————————————————
+原文链接：https://blog.csdn.net/weixin_44285988/article/details/89156876
+</code></pre><table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>b</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+</tr>
+<tr>
+<td>c</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+<td>27</td>
+<td>28</td>
+<td>29</td>
+<td>30</td>
+</tr>
+<tr>
+<td>d</td>
+<td>31</td>
+<td>32</td>
+<td>33</td>
+<td>34</td>
+<td>35</td>
+<td>36</td>
+<td>37</td>
+<td>38</td>
+<td>39</td>
+<td>40</td>
+</tr>
+<tr>
+<td>e</td>
+<td>41</td>
+<td>42</td>
+<td>43</td>
+<td>44</td>
+<td>45</td>
+<td>46</td>
+<td>47</td>
+<td>48</td>
+<td>49</td>
+<td>50</td>
+</tr>
+<tr>
+<td>f</td>
+<td>51</td>
+<td>52</td>
+<td>53</td>
+<td>54</td>
+<td>55</td>
+<td>56</td>
+<td>57</td>
+<td>58</td>
+<td>59</td>
+<td>60</td>
+</tr>
+<tr>
+<td>g</td>
+<td>61</td>
+<td>62</td>
+<td>63</td>
+<td>64</td>
+<td>65</td>
+<td>66</td>
+<td>67</td>
+<td>68</td>
+<td>69</td>
+<td>70</td>
+</tr>
+<tr>
+<td>h</td>
+<td>71</td>
+<td>72</td>
+<td>73</td>
+<td>74</td>
+<td>75</td>
+<td>76</td>
+<td>77</td>
+<td>78</td>
+<td>79</td>
+<td>80</td>
+</tr>
+<tr>
+<td>i</td>
+<td>81</td>
+<td>82</td>
+<td>83</td>
+<td>84</td>
+<td>85</td>
+<td>86</td>
+<td>87</td>
+<td>88</td>
+<td>89</td>
+<td>90</td>
+</tr>
+<tr>
+<td>j</td>
+<td>91</td>
+<td>92</td>
+<td>93</td>
+<td>94</td>
+<td>95</td>
+<td>96</td>
+<td>97</td>
+<td>98</td>
+<td>99</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<p>-</p>
+<h3 id="表格数据的字符串操作"><a href="#表格数据的字符串操作" class="headerlink" title="表格数据的字符串操作"></a>表格数据的字符串操作</h3><p>例如表格中的某列数据中都有各种前缀想进行统一更改的时候，这时字符串的替换操作就可以大显身手了，pandas对字符串的操作和python几乎一样，只要调用数据的<code>.str</code>方法就可以了</p>
+<pre><code>df1[&apos;性别&apos;]=df1[&apos;性别&apos;].str.replace(&apos;~&apos;,&apos;&apos;)#编辑性别的列
+print(&apos;我是替换后的数据\n{0}&apos;.format(df1))
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">9000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">7000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">4000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">8000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">100000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<h3 id="表格中列与列之间的计算"><a href="#表格中列与列之间的计算" class="headerlink" title="表格中列与列之间的计算"></a>表格中列与列之间的计算</h3><p>接上表格，把所有人的工资增加9000</p>
+<pre><code>df1[&apos;工资&apos;]=df1[&apos;工资&apos;]+9000#每个人的工资增加9000
+print(&apos;每个人的工资增加9000元\n{0}&apos;.format(df1))
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">工资</th>
+<th style="text-align:center">绩效分</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:left">18000</td>
+<td style="text-align:center">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:left">16000</td>
+<td style="text-align:center">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:left">13000</td>
+<td style="text-align:center">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:left">17000</td>
+<td style="text-align:center">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:left">109000</td>
+<td style="text-align:center">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<p>列之间的计算都是数值类型进行的。如果数据中包含非数值类型的字符和符号，要先把其转换为数值类型在进行计算；例如：数据中有%</p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2020/05/07/pandas常用实例/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
+  <article id="post-python的pandas基础" class="article article-type-post" itemscope itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2020/05/07/python的pandas基础/">python的pandas基础</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col">
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+</div>
+        <time datetime="2020-05-07T00:48:49.000Z" itemprop="datePublished" class="post-tiem">
+  2020-05-07
+</time>
+      </div>
+      <div class="post-content" itemprop="postContent" >
+        
+          <h2 id="python的pandas基础"><a href="#python的pandas基础" class="headerlink" title="python的pandas基础"></a>python的pandas基础</h2><p>江湖上流传着这么一句话——分析不识潘大师（PANDAS），纵是老手也枉然。Pandas是基于Numpy的专业数据分析工具，可以灵活高效的处理各种数据集，也是我们后期分析案例的神器。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p>pandas提供了两种数据结构，分别是<strong>DataFrame</strong>和<strong>Series</strong>。所有的pandas的骚操作都是基于于此。</p>
+<ul>
+<li>DataFrame：可以简单的理解为Excel中的表格    </li>
+<li>Series：Series可以理解为表中的一列</li>
+</ul>
+<h3 id="表格的创建"><a href="#表格的创建" class="headerlink" title="表格的创建"></a>表格的创建</h3><p>构造DataFrame最简单的方式是字典+列表，也就是python的<strong>Dictionary</strong>+<strong>List</strong>。Dictionary是键值对集合数据类型，理解为存储表格中的列的数据；列名为<strong>key</strong>,<strong>value</strong>为该列的所有数据值；其中的value的数据类型就是<strong>List</strong>，存储该列值的具体明细。表格的创建既有列，还有横行，即<strong>index</strong>。熟悉这个之后，对于Excel的创建就有了一个初步的了解。如下：</p>
+<pre><code>import pandas as pd 
+df1=pd.DataFrame({&apos;工资&apos;:[9000,7000,4000,8000,100000],&apos;绩效&apos;:[86,91,74,83,97],&apos;性别&apos;:[&apos;男&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;,&apos;女&apos;]},index=[&apos;王闵京&apos;,&apos;陈红英&apos;,&apos;张秀影&apos;,&apos;王春芳&apos;,&apos;陈春月&apos;])
+print(df1)
+</code></pre><p>运行后会出现以下表格：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center">工资</th>
+<th style="text-align:right">绩效</th>
+<th style="text-align:right">性别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">王闵京</td>
+<td style="text-align:center">9000</td>
+<td style="text-align:right">86</td>
+<td style="text-align:right">男</td>
+</tr>
+<tr>
+<td style="text-align:left">陈红英</td>
+<td style="text-align:center">7000</td>
+<td style="text-align:right">91</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">张秀影</td>
+<td style="text-align:center">4000</td>
+<td style="text-align:right">74</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">王春芳</td>
+<td style="text-align:center">8000</td>
+<td style="text-align:right">83</td>
+<td style="text-align:right">女</td>
+</tr>
+<tr>
+<td style="text-align:left">陈春月</td>
+<td style="text-align:center">100000</td>
+<td style="text-align:right">97</td>
+<td style="text-align:right">女</td>
+</tr>
+</tbody>
+</table>
+<p>其中工资、绩效、性别一栏为columns(列)；第一列的名字为index;中间的值为values</p>
+<h3 id="Excel和Csv文件的读取"><a href="#Excel和Csv文件的读取" class="headerlink" title="Excel和Csv文件的读取"></a>Excel和Csv文件的读取</h3><pre><code>#csv文件的读取.
+#engine是使用的分析引擎，读取csv文件一般指定python避免中文和编码造成的报错
+df2=pd.read_csv(&apos;测试文件.csv&apos;,engine=&apos;python&apos;)
+df2.head()
+#xls和xlsx文件的读取
+df3=pd.read_excel(&apos;测试文件.xls&apos;)
+df3.head()
+</code></pre><h3 id="文件的保存"><a href="#文件的保存" class="headerlink" title="文件的保存"></a>文件的保存</h3><pre><code>df2.to_csv(&apos;要保存的名字.csv&apos;)
+df3.to_excel(&apos;要保存的名字.xlsx&apos;)
+</code></pre><h3 id="认识数据"><a href="#认识数据" class="headerlink" title="认识数据"></a>认识数据</h3><pre><code>#查看默认前5行数据
+df2.head()
+#查看默认末尾5行数据
+df2.tail()
+#查看指定行数数据
+df2.head(10)
+#查看个列数据的类型
+df2.info()
+#快速查看数据类型的关键统计指标；像平均数、中位数、标准差等等
+#该方法只针对数值类型的值，其中count指的是统计每一列中有多少空值
+df2.describe()
+</code></pre><h3 id="获取数据的行数和列数"><a href="#获取数据的行数和列数" class="headerlink" title="获取数据的行数和列数"></a>获取数据的行数和列数</h3><pre><code># 获取行数
+ df2.shape[0] 
+ # 获取行数
+ len(df2)
+ # 获取列数
+ df2.shape[1] 
+</code></pre><h3 id="数据的增删改查"><a href="#数据的增删改查" class="headerlink" title="数据的增删改查"></a>数据的增删改查</h3><ul>
+<li>增</li>
+<li>删</li>
+<li>改</li>
+<li>查(选)</li>
+</ul>
+<p><strong>增</strong>：</p>
+<p>增加一列，用df[‘新列名’] = 新列值的形式，在原数据基础上赋值即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df2[&apos;新增的列名&apos;]=rang(1,len(df2)+1)</span><br></pre></td></tr></table></figure>
+<p><strong>删</strong>：</p>
+<p>axis = 1表示针对列的操作，inplace为True，则直接在源数据上进行修改，否则源数据会保持原样</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#</span><br><span class="line">df2.drop(&apos;删除的列&apos;,axis=1,inplace=True)</span><br></pre></td></tr></table></figure>
+<p><strong>改</strong>：</p>
+<p>df2[‘旧列名’] =  某个值或者某列值，就完成了对原列数值的修改</p>
+<p><strong>查(选)</strong>：</p>
+<p>选取某一列：df2[‘列名’]即可</p>
+<h3 id="Excel文件的数据遍历"><a href="#Excel文件的数据遍历" class="headerlink" title="Excel文件的数据遍历"></a>Excel文件的数据遍历</h3><p>Pandas是python的数据分析包，提供了大量的快速便捷处理数据的函数和方法，其中遍历的方法有一下几种，处理效率从慢到快：</p>
+<ol>
+<li>for in循环迭代方式</li>
+<li>iterrows()生成器方式</li>
+<li>apply()方法循环方式</li>
+<li>Pandas series的矢量化方式</li>
+<li>Numpy arrays的矢量化方式</li>
+</ol>
+<p>总结</p>
+<p>使用timeit方法对以上几种遍历方式进行执行时间测试，测试结果如下。可以看出循环执行的速度是最慢的，iterrows()针对Pandas的dataframe进行了优化，相比直接循环有显著提升。apply()方法也是在行之间进行循环，但由于利用了类似Cython的迭代器的一系列全局优化，其效率要比iterrows高很多。NumPy arrays的矢量化运行速度最快，其次是Pandas series矢量化。由于矢量化是同时作用于整个序列的，可以节省更多的时间，相比使用标量操作更好，NumPy使用预编译的C代码在底层进行优化，同时也避免了Pandas series操作过程中的很多开销，例如索引、数据类型等等，因此，NumPy arrays的操作要比Pandas series快得多。</p>
+<hr>
+<p>本文笔记摘抄自<a href="https://mp.weixin.qq.com/s?__biz=MzU5Mjg2OTQ1MA==&amp;mid=2247484097&amp;idx=1&amp;sn=ad8fabbd84bf67655996026fc0ac5688&amp;chksm=fe1863e4c96feaf200e9398bb7c824e99d3fc01ec965666497ce584466dc93f83dd5d127a46d&amp;scene=21#wechat_redirect">知乎吹牛Z</a><br><a href="https://blog.csdn.net/wem603947175/article/details/84311873">CSDN「西山枫叶」</a></p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2020/05/07/python的pandas基础/" class="post-more waves-button-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-NVM的使用" class="article article-type-post" itemscope itemprop="blogPost">
     
       
@@ -154,10 +642,10 @@ nvm list available    查看可以安装的版本
 nvm install stable    下载、编译、安装、使用当前的稳定版
 </code></pre><p><strong>安装</strong></p>
 <ul>
-<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
+<li>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh">https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh</a> | bash</li>
 <li>或者用homebrew 直接搜索nvm，进行安装</li>
 </ul>
-<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1" target="_blank" rel="noopener">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea" target="_blank" rel="noopener">简书Wo信你个鬼</a></p>
+<p>摘抄自<a href="https://www.jianshu.com/p/0ffa636a6fe1">简书椰果粒</a>、<a href="https://www.jianshu.com/p/7a33f2c19fea">简书Wo信你个鬼</a></p>
 <p><strong>国内源镜像</strong></p>
 <p>由于网络原因,NVM在更新和下载时会很慢。可以设置国内的镜像源进行安装更新；速度很快，步骤如下：</p>
 <ol>
@@ -166,10 +654,10 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
 <li>重启终端<code>source ~/.zshrc</code>；或者重开终端</li>
 <li>检查配置文件是否生效<code>echo $NVM_NODEJS_ORG_MIRROR</code></li>
 </ol>
-<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效" target="_blank" rel="noopener">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
+<p>如果最后输出<a href="http://npm.taobao.org/mirrors/node表明已经生效">http://npm.taobao.org/mirrors/node表明已经生效</a></p>
 <p>-</p>
 <blockquote>
-<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7" target="_blank" rel="noopener">简书omicron</a></p>
+<p>本文摘抄自<a href="https://www.jianshu.com/p/bc56e70303f7">简书omicron</a></p>
 </blockquote>
 
         
@@ -251,7 +739,7 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
       </div>
       <div class="post-content" itemprop="postContent" >
         
-          <h2 id="python常用包、工具、命令"><a href="#python常用包、工具、命令" class="headerlink" title="python常用包、工具、命令"></a>python常用包、工具、命令</h2><p><strong>pip</strong>：<a href="https://pypi.org/project/pip/" target="_blank" rel="noopener">pip</a>是常用的<a href="https://www.python.org/" target="_blank" rel="noopener">python</a>包管理工具，类似于<strong>java</strong>的<strong>maven</strong>。用python的同学，都离不开pip。在Python2.7的安装包中，<strong>easy_install.py</strong>是默认安装的，而pip需要我们手动在终端中进行安装：</p>
+          <h2 id="python常用包、工具、命令"><a href="#python常用包、工具、命令" class="headerlink" title="python常用包、工具、命令"></a>python常用包、工具、命令</h2><p><strong>pip</strong>：<a href="https://pypi.org/project/pip/">pip</a>是常用的<a href="https://www.python.org/">python</a>包管理工具，类似于<strong>java</strong>的<strong>maven</strong>。用python的同学，都离不开pip。在Python2.7的安装包中，<strong>easy_install.py</strong>是默认安装的，而pip需要我们手动在终端中进行安装：</p>
 <p><code>sudo easy_install pip</code></p>
 <h3 id="pip的常用命令"><a href="#pip的常用命令" class="headerlink" title="pip的常用命令"></a>pip的常用命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip --version #查看版本</span><br><span class="line">pip list #已安装包库列表</span><br><span class="line">pip install 包名 #安装指定的包库</span><br><span class="line">pip install --upgrade 库名 #更新指定的包库</span><br><span class="line">pip list --outdated  #查看过期的库(需要更新的库)</span><br><span class="line">pip uninstall 包名 #卸载已安装包</span><br></pre></td></tr></table></figure>
 <h3 id="mac-pip更换豆瓣镜像源"><a href="#mac-pip更换豆瓣镜像源" class="headerlink" title="mac pip更换豆瓣镜像源"></a>mac pip更换豆瓣镜像源</h3><ol>
@@ -312,7 +800,7 @@ nvm install stable    下载、编译、安装、使用当前的稳定版
         
           <h2 id="已使用过的MAC终端工具"><a href="#已使用过的MAC终端工具" class="headerlink" title="已使用过的MAC终端工具"></a>已使用过的MAC终端工具</h2><p><strong>nvm</strong>：<strong>nodejs</strong>包管理工具，同时对多版本进行管理</p>
 <p><strong>pyenv</strong>:<strong>python</strong>多版本管理工具。可配合的镜像源为阿里,搜狐和豆瓣源不可用</p>
-<p><strong>homebrew</strong>: <a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">homebrew</a>包管理工具，下载更新非常高效，全程终端进行，配合国内镜像使用速度很快。其中分为<strong>cask</strong>和<strong>formula</strong>模块。</p>
+<p><strong>homebrew</strong>: <a href="https://brew.sh/index_zh-cn.html">homebrew</a>包管理工具，下载更新非常高效，全程终端进行，配合国内镜像使用速度很快。其中分为<strong>cask</strong>和<strong>formula</strong>模块。</p>
 <ul>
 <li>cask：为常用app模块,例如：优酷、爱奇艺</li>
 <li>formula:开发工具，开发环境的模块</li>
@@ -376,7 +864,7 @@ brew cleanup -n          # 查看可清理的旧版本包，不执行实际操�
           <h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><h1 id="MacDown"><a href="#MacDown" class="headerlink" title="MacDown"></a>MacDown</h1><p><img src="http://macdown.uranusjr.com/static/images/logo-160.png" alt="MacDown logo"></p>
 <p>Hello there! I’m <strong>MacDown</strong>, the open source Markdown editor for OS X.</p>
 <p>Let me introduce myself.</p>
-<h2 id="Markdown-and-I"><a href="#Markdown-and-I" class="headerlink" title="Markdown and I"></a>Markdown and I</h2><p><strong>Markdown</strong> is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found <a href="http://daringfireball.net/projects/markdown/syntax" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="Markdown-and-I"><a href="#Markdown-and-I" class="headerlink" title="Markdown and I"></a>Markdown and I</h2><p><strong>Markdown</strong> is a plain text formatting syntax created by John Gruber, aiming to provide a easy-to-read and feasible markup. The original Markdown syntax specification can be found <a href="http://daringfireball.net/projects/markdown/syntax">here</a>.</p>
 <p><strong>MacDown</strong> is created as a simple-to-use editor for Markdown documents. I render your Markdown contents real-time into HTML, and display them in a preview panel.</p>
 <p><img src="http://d.pr/i/10UGP+" alt="MacDown Screenshot"></p>
 <p>I support all the original Markdown syntaxes. But I can do so much more! Various popular but non-standard syntaxes can be turned on/off from the <a href="#markdown-pane"><strong>Markdown</strong> preference pane</a>.</p>
@@ -406,12 +894,12 @@ Header 2
 #### Header 4
 ##### Header 5
 ###### Header 6
-</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#x75;&#x72;&#x61;&#x6e;&#117;&#x73;&#106;&#x72;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;" target="_blank" rel="noopener">&#x75;&#x72;&#x61;&#x6e;&#117;&#x73;&#106;&#x72;&#64;&#x67;&#109;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
-<p>Same thing with urls: <a href="http://macdown.uranusjr.com" target="_blank" rel="noopener">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
-<p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
+</code></pre><h3 id="Links-and-Email"><a href="#Links-and-Email" class="headerlink" title="Links and Email"></a>Links and Email</h3><h4 id="Inline"><a href="#Inline" class="headerlink" title="Inline"></a>Inline</h4><p>Just put angle brackets around an email and it becomes clickable: <a href="mailto:&#117;&#x72;&#x61;&#110;&#117;&#115;&#x6a;&#114;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#117;&#x72;&#x61;&#110;&#117;&#115;&#x6a;&#114;&#64;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#99;&#x6f;&#x6d;</a><br><code>&lt;uranusjr@gmail.com&gt;</code>  </p>
+<p>Same thing with urls: <a href="http://macdown.uranusjr.com">http://macdown.uranusjr.com</a><br><code>&lt;http://macdown.uranusjr.com&gt;</code>  </p>
+<p>Perhaps you want to some link text like this: <a href="http://macdown.uranusjr.com" title="Title">Macdown Website</a><br><code>[Macdown Website](http://macdown.uranusjr.com &quot;Title&quot;)</code> (The title is optional)  </p>
 <h4 id="Reference-style"><a href="#Reference-style" class="headerlink" title="Reference style"></a>Reference style</h4><p>Sometimes it looks too messy to include big long urls inline, or you want to keep all your urls together.  </p>
-<p>Make <a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">a link</a> <code>[a link][arbitrary_id]</code> then on it’s own line anywhere else in the file:<br><code>[arbitrary_id]: http://macdown.uranusjr.com &quot;Title&quot;</code></p>
-<p>If the link text itself would make a good id, you can link <a href="http://macdown.uranusjr.com" target="_blank" rel="noopener">like this</a> <code>[like this][]</code>, then on it’s own line anywhere else in the file:<br><code>[like this]: http://macdown.uranusjr.com</code>  </p>
+<p>Make <a href="http://macdown.uranusjr.com" title="Title">a link</a> <code>[a link][arbitrary_id]</code> then on it’s own line anywhere else in the file:<br><code>[arbitrary_id]: http://macdown.uranusjr.com &quot;Title&quot;</code></p>
+<p>If the link text itself would make a good id, you can link <a href="http://macdown.uranusjr.com">like this</a> <code>[like this][]</code>, then on it’s own line anywhere else in the file:<br><code>[like this]: http://macdown.uranusjr.com</code>  </p>
 <h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><h4 id="Inline-1"><a href="#Inline-1" class="headerlink" title="Inline"></a>Inline</h4><p><code>![Alt Image Text](path/or/url/to.jpg &quot;Optional Title&quot;)</code></p>
 <h4 id="Reference-style-1"><a href="#Reference-style-1" class="headerlink" title="Reference style"></a>Reference style</h4><p><code>![Alt Image Text][image-id]</code><br>on it’s own line elsewhere:<br><code>[image-id]: path/or/url/to.jpg &quot;Optional Title&quot;</code></p>
 <h3 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h3><ul>
@@ -443,7 +931,7 @@ Header 2
 <p>Most markdown syntaxes work inside block quotes.</p>
 <ul>
 <li>Lists</li>
-<li><a href="http://macdown.uranusjr.com" title="Title" target="_blank" rel="noopener">Links</a></li>
+<li><a href="http://macdown.uranusjr.com" title="Title">Links</a></li>
 <li>Etc.</li>
 </ul>
 </blockquote>
@@ -459,7 +947,7 @@ Header 2
 <h2 id="The-General-Preferences-Pane"><a href="#The-General-Preferences-Pane" class="headerlink" title="The General Preferences Pane"></a><a name="general-pane"></a>The General Preferences Pane</h2><p>This is where I keep preferences related to application behavior.<br><img src="http://d.pr/i/rvwu+" alt="General preferences pane"></p>
 <p>The General Preferences Pane allows you to tell me how you want me to behave. For example, do you want me to make sure there is a document open when I launch? You can also tell me if I should constantly update the preview window as you type, or wait for you to hit <code>command-R</code> instead. Maybe you prefer your editor window on the right? Or to see the word-count as you type. This is also the place to tell me if you are interested in pre-releases of me, or just want to stick to better-tested official releases.  </p>
 <h2 id="The-Editor-Preference-Pane"><a href="#The-Editor-Preference-Pane" class="headerlink" title="The Editor Preference Pane"></a><a name="editor-pane"></a>The Editor Preference Pane</h2><p>This is where I keep preferences related to the behavior and styling of the editing window.<br><img src="http://d.pr/i/6OL5+" alt="Editor preferences pane"></p>
-<h3 id="Styling"><a href="#Styling" class="headerlink" title="Styling"></a>Styling</h3><p>My editor provides syntax highlighting. You can edit the base font and the coloring/sizing theme. I provided some default themes (courtesy of <a href="http://mouapp.com" target="_blank" rel="noopener">Mou</a>’s creator, Chen Luo) if you don’t know where to start.</p>
+<h3 id="Styling"><a href="#Styling" class="headerlink" title="Styling"></a>Styling</h3><p>My editor provides syntax highlighting. You can edit the base font and the coloring/sizing theme. I provided some default themes (courtesy of <a href="http://mouapp.com">Mou</a>’s creator, Chen Luo) if you don’t know where to start.</p>
 <p>You can also edit, or even add new themes if you want to! Just click the <strong><em>Reveal</em></strong> button, and start moving things around. Remember to use the correct file extension (<code>.styles</code>), though. I’m picky about that.</p>
 <p>I offer auto-completion and other functions to ease your editing experience. If you don’t like it, however, you can turn them off.</p>
 <h2 id="Hack-On"><a href="#Hack-On" class="headerlink" title="Hack On"></a>Hack On</h2><p>That’s about it. Thanks for listening. I’ll be quiet from now on (unless there’s an update about the app—I’ll remind you for that!).</p>
@@ -580,7 +1068,7 @@ Header 2
 <blockquote>
 <p>a library for composing asynchronous and event-based programs using observable sequences for the Java VM</p>
 </blockquote>
-<p>这是在<a href="https://github.com/ReactiveX/RxJava" target="_blank" rel="noopener">RxJava</a>在github主页上的介绍</p>
+<p>这是在<a href="https://github.com/ReactiveX/RxJava">RxJava</a>在github主页上的介绍</p>
 <h3 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h3><p><code>RxJava</code>的异步实现，是通过扩展的观察者模式实现的。android中比较典型的例子：点击监听器<code>OnClickListener</code>。<code>View</code>是被观察者，<code>OnClickListener</code>是观察者，两者通过<code>setOnClickListener</code>产生关系，<code>Android Framework</code>层会将点击事件发送给注册过的OnClickListener。</p>
 <p>RxJava的四大基本概念</p>
 <ul>
@@ -659,7 +1147,7 @@ Header 2
 </ul>
 <p>尽量搭配使用RelativeLayout+LinearLayout的weight属性</p>
 <p>ps:google官方并不提倡使用weight权重，因为这样会在加载布局时造成大量的计算，影响性能。</p>
-<h3 id="Android-Percent-Support-Lib"><a href="#Android-Percent-Support-Lib" class="headerlink" title="Android Percent Support Lib"></a><a href="http://http://blog.csdn.net/u014784379/article/details/46754189" target="_blank" rel="noopener">Android Percent Support Lib</a></h3><p>还有就是谷歌官方推出了类似于CSS的百分比来布局的库（<code>Android Percent Support Lib</code>）：</p>
+<h3 id="Android-Percent-Support-Lib"><a href="#Android-Percent-Support-Lib" class="headerlink" title="Android Percent Support Lib"></a><a href="http://http://blog.csdn.net/u014784379/article/details/46754189">Android Percent Support Lib</a></h3><p>还有就是谷歌官方推出了类似于CSS的百分比来布局的库（<code>Android Percent Support Lib</code>）：</p>
 <p>如何使用</p>
 <p>首先需要满足如下要求：</p>
 <p>Android SDK v22<br>Android Build Tools v22.0.1<br>Android Percent Support Repository v22.2.0<br>Android Support v4 Repository v22.2.0</p>
@@ -718,96 +1206,6 @@ Header 2
 
 </li>
   
-    <li class="post-list-item">
-  <article id="post-android系统特性与平台架构" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/08/android系统特性与平台架构/">android系统特性与平台架构</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li></ul>
-</div>
-        <time datetime="2015-09-08T03:47:43.000Z" itemprop="datePublished" class="post-tiem">
-  2015-09-08
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h3 id="1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"><a href="#1-应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）" class="headerlink" title="1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）"></a>1.应用程序框架支持组件的重用与替换（app发布的时候遵守了框架的约定，其他APP也可以使用该模块）</h3><h3 id="2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"><a href="#2-Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎" class="headerlink" title="2.Dalvik虚拟机：专门为移动设备优化；集成的浏览器：webkit引擎"></a>2.<code>Dalvik</code>虚拟机：专门为移动设备优化；集成的浏览器：<code>webkit</code>引擎</h3><h3 id="3-sqlite结构化的数据存储"><a href="#3-sqlite结构化的数据存储" class="headerlink" title="3.sqlite结构化的数据存储"></a>3.<code>sqlite</code>结构化的数据存储</h3><h3 id="4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等"><a href="#4-优化的图形库，多媒体支持，GSM电话技术，蓝牙等" class="headerlink" title="4.优化的图形库，多媒体支持，GSM电话技术，蓝牙等"></a>4.优化的图形库，多媒体支持，<code>GSM</code>电话技术，蓝牙等</h3><h3 id="5-采用软件叠层方式构建"><a href="#5-采用软件叠层方式构建" class="headerlink" title="5.采用软件叠层方式构建"></a>5.采用软件叠层方式构建</h3><hr>
-<h1 id="android平台架构："><a href="#android平台架构：" class="headerlink" title="android平台架构："></a>android平台架构：</h1><h3 id="1-application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。"><a href="#1-application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。" class="headerlink" title="1.application：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。"></a>1.<code>application</code>：应用程序层，我们平时做的开发就是在这个层次上进行的，包括一些内置的应用程序，使用的是java语言。</h3><h3 id="2-application-framework-应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现"><a href="#2-application-framework-应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现" class="headerlink" title="2.application framework:应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（telephonyManager）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现"></a>2.<code>application framework</code>:应用程序框架层，无论内置还是我们自己编写的app都是使用的这个层，比如我们实现一个来电黑名单，自动挂断电话，我们就需要用到电话管理（<code>telephonyManager</code>）通过该层，我们就可以很轻松的实现挂断操作，而不需要关心底层实现</h3><h3 id="3-libraries-库-android-Runtime-android运行时-：android提供了一些c和c-库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集-Dalvik虚拟机构成，Dalvik虚拟机是针对-移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–-dex文件—–Dalvik则运行-dex文件"><a href="#3-libraries-库-android-Runtime-android运行时-：android提供了一些c和c-库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集-Dalvik虚拟机构成，Dalvik虚拟机是针对-移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–-dex文件—–Dalvik则运行-dex文件" class="headerlink" title="3.libraries(库)+android Runtime(android运行时)：android提供了一些c和c++库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集+Dalvik虚拟机构成，Dalvik虚拟机是针对 移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–.dex文件—–Dalvik则运行.dex文件"></a>3.<code>libraries</code>(库)+android Runtime(android运行时)：android提供了一些c和c++库，为不同组件所使用，比如媒体框架。android运行时则由android核心库集+Dalvik虚拟机构成，Dalvik虚拟机是针对 移动设备的虚拟机，它的特点：不需要很快的CPU计算速度和大量的内存空间；而每个app都单独地运行在单独的Dalvik虚拟机内每个app对应一个Dalvik集成。通过DX工具——将class文件打包——编译—–.dex文件—–Dalvik则运行.dex文件</h3><h3 id="4-linux内核-这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。"><a href="#4-linux内核-这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。" class="headerlink" title="4.linux内核  这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。"></a>4.<code>linux</code>内核  这里就是涉及底层驱动的东西了，一些系统服务，比如安全性，内存管理以及进程管理等。</h3><hr>
-<h1 id="相关术语的解析："><a href="#相关术语的解析：" class="headerlink" title="相关术语的解析："></a>相关术语的解析：</h1><h3 id="1-Dalvik-android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。"><a href="#1-Dalvik-android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。" class="headerlink" title="1.Dalvik:android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。"></a>1.Dalvik:android特有的虚拟机，和JVM不同，Dalvik非常适合在移动终端上使用。</h3><h3 id="2-AVD：android虚拟设备，模拟器"><a href="#2-AVD：android虚拟设备，模拟器" class="headerlink" title="2.AVD：android虚拟设备，模拟器"></a>2.<code>AVD</code>：android虚拟设备，模拟器</h3><h3 id="3-SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb-exe"><a href="#3-SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb-exe" class="headerlink" title="3.SDK：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb.exe"></a>3.<code>SDK</code>：软件开发工具包，就是安卓系统、平台架构的工具集合，如adb.exe</h3><h3 id="4-DDMS-安卓调试工具"><a href="#4-DDMS-安卓调试工具" class="headerlink" title="4.DDMS:安卓调试工具"></a>4.<code>DDMS</code>:安卓调试工具</h3><h3 id="5-DX工具：将class文件转换成-dex文件。"><a href="#5-DX工具：将class文件转换成-dex文件。" class="headerlink" title="5.DX工具：将class文件转换成.dex文件。"></a>5.DX工具：将class文件转换成.dex文件。</h3><h3 id="6-AAPT：android资源打包工具"><a href="#6-AAPT：android资源打包工具" class="headerlink" title="6.AAPT：android资源打包工具"></a>6.<code>AAPT</code>：android资源打包工具</h3><h3 id="7-adb：android调试桥，命令行必备。"><a href="#7-adb：android调试桥，命令行必备。" class="headerlink" title="7.adb：android调试桥，命令行必备。"></a>7.<code>adb</code>：android调试桥，命令行必备。</h3><h3 id="8-R-java-有aapt工具根据APP中的资源文件自动生成，可以理解为"><a href="#8-R-java-有aapt工具根据APP中的资源文件自动生成，可以理解为" class="headerlink" title="8.R.java:有aapt工具根据APP中的资源文件自动生成，可以理解为"></a>8.<code>R.java</code>:有aapt工具根据APP中的资源文件自动生成，可以理解为</h3><h3 id="9-androidManifest-xml：APP的包名、组件生命、程序兼容的最低版本-所需的权限的配置文件。"><a href="#9-androidManifest-xml：APP的包名、组件生命、程序兼容的最低版本-所需的权限的配置文件。" class="headerlink" title="9.androidManifest.xml：APP的包名、组件生命、程序兼容的最低版本+所需的权限的配置文件。"></a>9.<code>androidManifest.xml</code>：APP的包名、组件生命、程序兼容的最低版本+所需的权限的配置文件。</h3>
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2015/09/08/android系统特性与平台架构/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
-    <li class="post-list-item">
-  <article id="post-android-ADB-常用命令" class="article article-type-post" itemscope itemprop="blogPost">
-    
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2015/09/06/android-ADB-常用命令/">android ADB 常用命令</a>
-    </h3>
-  
-
-
-
-      <div class="post-meat flex-row">
-        <div class="flex-col">
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ADB/">ADB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
-</div>
-        <time datetime="2015-09-06T07:27:01.000Z" itemprop="datePublished" class="post-tiem">
-  2015-09-06
-</time>
-      </div>
-      <div class="post-content" itemprop="postContent" >
-        
-          <h2 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h2><pre><code>adb install [-r] [-s]  xxxx.apk 安装软件
-app：adb unstall [-k] &lt;包名&gt; -k 卸载app
-adb pull xxxx.xxxx 取出手机中的文件
-adb push xxx.xxx 发送文件到手机当中
-adb shell  进入手机终端
-adb devices     杀死adb
-adb start-server   启动adb
-reset adb 重启
-</code></pre><p> FAQ</p>
-<ul>
-<li>App的包名是App的唯一标识！！！</li>
-<li>安装软件中的  -r  重新安装</li>
-<li>-s   安装到SDK</li>
-</ul>
-
-        
-      </div>
-      <div class="post-footer clearfix">
-        <a href="/2015/09/06/android-ADB-常用命令/" class="post-more waves-button-light">MORE</a>
-      </div>
-    
-
-  </article>
-
-
-</li>
-  
   </ul>
   
     <nav id="page-nav">
@@ -816,7 +1214,6 @@ reset adb 重启
       </div>
     </nav>
   
-
 
 
     </div>
@@ -860,6 +1257,14 @@ reset adb 重启
     </ul>
  </div>
 
+
+
+  <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+  <script>
+    if (window.mermaid) {
+      mermaid.initialize({theme: 'forest'});
+    }
+  </script>
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
