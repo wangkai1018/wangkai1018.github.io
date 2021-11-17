@@ -528,22 +528,14 @@
 </li>
 <li>搞笑类型</li>
 </ul>
-<pre class="mermaid">sequenceDiagram
-participant 用户 as 用户思维
-participant 意外反转 as 意外反转
-participant 结果 as 实际结果
-用户 ->> 意外反转: 故事1预想发展
-用户 -->> 意外反转: 故事2连接词
-意外反转 -->> 结果: 故事1用户联想的结果
-意外反转 ->> 结果: 故事2用户得到的实际结果</pre>
-
-<p>​      搞笑内容的构思逻辑</p>
+<p><pre class="mermaid">sequenceDiagram<br>participant 用户 as 用户思维<br>participant 意外反转 as 意外反转<br>participant 结果 as 实际结果<br>用户 -&gt;&gt; 意外反转: 故事1预想发展<br>用户 –&gt;&gt; 意外反转: 故事2连接词<br>意外反转 –&gt;&gt; 结果: 故事1用户联想的结果<br>意外反转 -&gt;&gt; 结果: 故事2用户得到的实际结果</pre><br>搞笑内容的构思逻辑</p>
 <pre><code>1. 用户思维：用户感触到故事1的前半段时，其大脑会联想到结果，也就是故事1的虚线部分。
 2. 主线反转：描述完毕故事1的前半段后，此时引发反转，通过连接词（故事1中特有的元素）把用户的思维反转到故事2中的后半段，并给出和用户的联想不同的结果。完成以上两个步骤就能通过制造反转、打破固有思维的方式给用户制造惊喜，进而促进用户因为意外而产生发笑。
 </code></pre><ul>
-<li><p>煽情类型</p>
-<p><pre class="mermaid">  graph LR<br>A[包装] – 刺激 –&gt; B[感官];<br>B – 产生 –&gt; C[情绪];<br>C – 引发 –&gt; D[共鸣];</pre><br>感官：听觉、视觉、嗅觉、触觉、味觉、触觉<br>情绪：高兴、忧伤、愤怒、思念、悲伤、惊讶、恐惧</p>
-<p>案例分析</p>
+<li>煽情类型</li>
+</ul>
+<p><pre class="mermaid">graph LR<br>A[包装] – 刺激 –&gt; B[感官];<br>B – 产生 –&gt; C[情绪];<br>C – 引发 –&gt; D[共鸣];</pre><br>  感官：听觉、视觉、嗅觉、触觉、味觉、触觉<br>  情绪：高兴、忧伤、愤怒、思念、悲伤、惊讶、恐惧</p>
+<p>  案例分析</p>
 <ol>
 <li>假设国庆节前夕需要拍摄一条爱国短视频，引发用户爱国情怀的共鸣，构思流程如下所示：<ul>
 <li>人物特点：小男孩，中文不流利，出生在国外</li>
@@ -553,7 +545,7 @@ participant 结果 as 实际结果
 </li>
 <li>构造场景：出租车上，男孩用蹩脚的汉语和司机师傅说要去天安门广场，并告诉司机这是第一次回中国，有什么地方可以推荐的。司机师傅balabala说了一堆。切换镜头，男孩已经走在了天安门广场上。当他来国旗旁边是，显示盯着国旗看了一会，之后抬起右手对国旗敬了一个军礼。此时出现字幕“国家强大，民族才有尊严”</li>
 </ol>
-</li>
+<ul>
 <li><p>猎奇类型</p>
 <ol>
 <li>新奇指用户的猎奇心理：人会对突然遭遇未感知或认知经验迥异的事情表现出心理或行为上的过度反映，通常表现为好奇。通俗一点说能给人带来新奇的事物大概率是超出用户的认知的。</li>
@@ -659,7 +651,7 @@ participant 结果 as 实际结果
 <p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">op1=>operation: 复述
 op2=>operation: 感悟
 op3=>operation: 应用
-op1->op2->op3</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+op1->op2->op3</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
 
         
       </div>
@@ -776,7 +768,14 @@ op1->op2->op3</textarea><textarea id="flowchart-0-options" style="display: none"
           <h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><p>在这里填写博客内容</p>
 <div id="flowchart-0" class="flow-chart"></div><br><div id="sequence-0"></div>
 
-<p><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
+<p><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
+op=>operation: 王凯
+cond=>condition: Yes or No?
+e=>end
+
+st->op->cond
+cond(yes)->e
+cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.27/webfontloader.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.6/sequence-diagram-min.js"></script><textarea id="sequence-0-code" style="display: none">participant Client
 participant Server
 
 Note left of Client:SYN_SENT
@@ -785,14 +784,7 @@ Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: Start
-op=>operation: 王凯
-cond=>condition: Yes or No?
-e=>end
-
-st->op->cond
-cond(yes)->e
-cond(no)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -843,7 +835,7 @@ Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -912,7 +904,7 @@ Note right of Server:SYN_RCVD
 Server->Client:SYN=1 seq=y ACK=x+1
 Note left of Client:ESTABLISHED
 Client->Server:ACK=y+1
-Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
+Note right of Server:ESTABLISHED</textarea><textarea id="sequence-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("sequence-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("sequence-0-options").value));  var diagram = Diagram.parse(code);  diagram.drawSVG("sequence-0", options);</script></p>
 
         
       </div>
@@ -1249,10 +1241,10 @@ op3=>operation: 二八原则，大部分资源倾斜给头部生产者
 
 cond->op2->op3
 cond(yes,right)->op1
-cond(no)->op2</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 新闻联播中是否经常听到“供给侧改革”？---国家指定标准
+cond(no)->op2</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 新闻联播中是否经常听到“供给侧改革”？---国家指定标准
 op1=>operation: 平台型业务模式链接的是B端（供给端）和C端（消费端）
 op2=>operation: B端（供给端）用户的管理方法及规则，其作用是提升供给侧的效率
-st->op1->op2</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">st=>start: 开始
+st->op1->op2</textarea><textarea id="flowchart-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">st=>start: 开始
 op1=>operation: 认领
 op2=>operation: 激励
 op3=>operation: 淘汰
@@ -1263,11 +1255,11 @@ e=>end: 结束
 
 st->op1->op2->op3->op4->op5->cond
 cond(yes,right)->op1->op2->op3->op4->op5
-cond(no)->e</textarea><textarea id="flowchart-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script><textarea id="flowchart-3-code" style="display: none">op1=>operation: 冲突
+cond(no)->e</textarea><textarea id="flowchart-2-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script><textarea id="flowchart-3-code" style="display: none">op1=>operation: 冲突
 op2=>operation: 话题
 op3=>operation: 围观
 
-op1->op2->op3</textarea><textarea id="flowchart-3-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-3-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-3-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-3", options);</script></p>
+op1->op2->op3</textarea><textarea id="flowchart-3-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-3-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-3-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-3", options);</script></p>
 
         
       </div>
