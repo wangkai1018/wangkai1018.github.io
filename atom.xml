@@ -47,9 +47,9 @@
     <link href="http://www.codingevo.com/2023/12/03/%E7%81%B5%E6%B4%BB%E5%B0%B1%E4%B8%9A%E4%B8%AA%E4%BA%BA%E7%A4%BE%E4%BC%9A%E4%BF%9D%E9%99%A9%E8%A1%A5%E8%B4%B4%E5%AE%8C%E6%95%B4%E6%B5%81%E7%A8%8B%E5%9B%BE/"/>
     <id>http://www.codingevo.com/2023/12/03/灵活就业个人社会保险补贴完整流程图/</id>
     <published>2023-12-03T06:47:10.000Z</published>
-    <updated>2023-12-06T16:23:37.864Z</updated>
+    <updated>2023-12-06T16:26:40.231Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="灵活就业个人社会保险补贴完整流程图"><a href="#灵活就业个人社会保险补贴完整流程图" class="headerlink" title="灵活就业个人社会保险补贴完整流程图"></a>灵活就业个人社会保险补贴完整流程图</h2><pre class="mermaid">graph TBa[对对对]</pre><pre class="mermaid">graph TBsubgraph 2022年4月5日a[登记失业人员流程]-->b[个人就业登记流程]b-->z{是否缴纳空档期保险2个月或4个月}z -->|缴纳| y{户口性质居民或农民};y -->|居民| w[北京人社增员流程]y -->|农民或无档案居民| v[农民自缴窗口办理]endsubgraph 2022年5月5日c[灵活就业这个申请流程]endsubgraph 2022年7月d[灵活就业汇报工作流程]endz -->|不缴纳| cc-->dv-->cw-->c</pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="灵活就业个人社会保险补贴完整流程图"><a href="#灵活就业个人社会保险补贴完整流程图" class="headerlink" title="灵活就业个人社会保险补贴完整流程图"></a>灵活就业个人社会保险补贴完整流程图</h2><pre class="mermaid">graph TBsubgraph 2022年4月5日a[登记失业人员流程]-->b[个人就业登记流程]b-->z{是否缴纳空档期保险2个月或4个月}z -->|缴纳| y{户口性质居民或农民};y -->|居民| w[北京人社增员流程]y -->|农民或无档案居民| v[农民自缴窗口办理]endsubgraph 2022年5月5日c[灵活就业这个申请流程]endsubgraph 2022年7月d[灵活就业汇报工作流程]endz -->|不缴纳| cc-->dv-->cw-->c</pre>]]></content>
     
     <summary type="html">
     
